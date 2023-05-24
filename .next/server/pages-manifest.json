@@ -1,13 +1,5 @@
 {
-  "/_error": "pages/_error.js",
-  "/about": "pages/about.html",
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/projects": "pages/projects.html",
-  "/articles/being-black-jiujitsu": "pages/articles/being-black-jiujitsu.html",
-  "/articles/what-is-jiu-jitsu": "pages/articles/what-is-jiu-jitsu.html",
-  "/thank-you": "pages/thank-you.html",
-  "/articles": "pages/articles.js",
-  "/": "pages/index.js",
-  "/404": "pages/404.html"
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
 }
