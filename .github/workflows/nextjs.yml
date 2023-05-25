@@ -41,7 +41,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache: yarn
 
 
       - name: Restore cache
@@ -54,7 +54,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Install dependencies
-        run: yarn install 
+        run: yarn install
 
       - name: Install Next.js and MDX dependencies
         run: |
