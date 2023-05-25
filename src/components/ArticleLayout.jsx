@@ -32,23 +32,24 @@ export function ArticleLayout({
   return (
     <>
     <NextSeo
-      title={meta.title}
-      description={meta.description}
-      canonical={`https://earl.dev${router.pathname}`}
-      openGraph={{
-        url: `https://earl.dev${router.pathname}`,
-        images: [
-          {
-            url: `https://og.earl.dev/api/og?title=${meta.title}&desc=${meta.description}`,
-            width: 1200,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }
-        ],
-        siteName: 'earl.dev',
-      }}
-    />
+  title={meta.title}
+  description={meta.description}
+  canonical={`https://earl.dev${router.asPath}`}
+  openGraph={{
+    url: `https://earl.dev${router.asPath}`,
+    images: [
+      {
+        url: `https://og.earl.dev/api/og?title=${meta.title}&desc=${meta.description}`,
+        width: 1200,
+        height: 600,
+        alt: 'Og Image Alt',
+        type: 'image/jpeg',
+      }
+    ],
+    siteName: 'earl.dev',
+  }}
+/>
+
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">

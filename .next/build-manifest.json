@@ -5,65 +5,65 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/CNIJh4xstsM7e8jfSVrhr/_buildManifest.js",
-    "static/CNIJh4xstsM7e8jfSVrhr/_ssgManifest.js"
+    "static/d9Cwn8pUBWQglAczNbv3a/_buildManifest.js",
+    "static/d9Cwn8pUBWQglAczNbv3a/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
     "/": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/index-a26337ed779c261d.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/index-5ff5c45447134e78.js"
     ],
     "/_app": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/css/ef8d91d874a3e4f8.css",
-      "static/chunks/pages/_app-5f8e1385e30b985b.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/css/8ab2ccd6b33cd2f4.css",
+      "static/chunks/pages/_app-4100acb20cbf8b41.js"
     ],
     "/_error": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/_error-e4f561a102d9bb14.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
     ],
     "/about": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/about-71b2b3d2f23bc75a.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/about-68772ae11a4d7dee.js"
     ],
     "/articles": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/articles-6f4a8153a5374793.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/articles-4fbaf7a1ee37de65.js"
     ],
     "/articles/being-black-jiujitsu": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/articles/being-black-jiujitsu-bc68aeb40f1c11b0.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/articles/being-black-jiujitsu-dcfb2e7fd0a2d466.js"
     ],
     "/articles/what-is-jiu-jitsu": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/articles/what-is-jiu-jitsu-b19f7a4cc6393d31.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/articles/what-is-jiu-jitsu-8d1e27a71908ef4e.js"
     ],
     "/projects": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/projects-d1e065d2b4966cb8.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/projects-c5d33bad028cd718.js"
     ],
     "/thank-you": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
-      "static/chunks/framework-7751730b10fa0f74.js",
-      "static/chunks/main-4eee5545d50ee701.js",
-      "static/chunks/pages/thank-you-bb1c43694eb35fd4.js"
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/thank-you-3a2a98947db744b5.js"
     ]
   },
   "ampFirstPages": []

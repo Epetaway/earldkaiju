@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export function Bookmark({  href, title,  image , children}) {
   return (
     <a href={href} className="not-prose">
