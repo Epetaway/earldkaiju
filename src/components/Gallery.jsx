@@ -16,7 +16,7 @@ export function Gallery({ images }) {
           </div>
         </div>
       ))}
-      <style jsx>{`
+      <style>{`
         :root {
           --scrollbar-track-color: #d1d5db; /* Light mode track color */
           --scrollbar-thumb-color: #4b5563; /* Light mode thumb color */

@@ -75,12 +75,12 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hey there! I'm Earl Hickson Jr., a highly skilled Front End Web
+              Hey there! I&apos;m Earl Hickson Jr., a highly skilled Front End Web
               Engineer with a strong background in Graphic Design.
             </h1>
             <div className="prose mt-6 space-y-7 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400">
               <p>
-                But there's more to me than just my technical expertise. I have
+                But there&apos;s more to me than just my technical expertise. I have
                 a deep connection to the concept of kaiju that goes beyond the
                 surface-level imagery.
               </p>
@@ -98,7 +98,7 @@ export default function About() {
                 self-esteem issues. While growing up, my love for martial arts
                 was evident, and Karate was the only sport I was allowed to
                 pursue. However, I longed for the connection and community that
-                martial arts provided, but it seemed like it wasn't in the cards
+                martial arts provided, but it seemed like it wasn&apos;t in the cards
                 for me.
               </p>
               <p>
@@ -106,7 +106,7 @@ export default function About() {
                 I was able to tap into my inner kaiju and embrace my strength
                 and power while also learning control and discipline. Jiu-jitsu
                 has been transformative for me, giving me the tools to become
-                the father and the man I never had in my life. I'm forever
+                the father and the man I never had in my life. I&apos;m forever
                 grateful for this art and the incredible community that
                 accompanies it.
               </p>
@@ -124,17 +124,17 @@ export default function About() {
                 learning, allow me to deliver exceptional results.
               </p>
               <p>
-                When I'm not honing my craft, you can find me channeling my
+                When I&apos;m not honing my craft, you can find me channeling my
                 inner kaiju on the Jiu-jitsu mat or working on projects that
-                excite me. I'm passionate about creating visually stunning
+                excite me. I&apos;m passionate about creating visually stunning
                 websites that not only captivate users but also provide an
                 exceptional user experience.
               </p>
               <p>
-                If you're seeking a talented web engineer with a unique
-                perspective and a dedication to excellence, let's connect and
+                If you&apos;re seeking a talented web engineer with a unique
+                perspective and a dedication to excellence, let&apos;s connect and
                 create something extraordinary together. Reach out to me, and
-                let's embark on this exciting journey!
+                let&apos;s embark on this exciting journey!
               </p>
             </div>
           </div>

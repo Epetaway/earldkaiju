@@ -241,7 +241,7 @@ export default function Home({ articles }) {
           Graphic artist, Front-end developer, and Jiu-Jitsu enthusiast.
           </h1>
           <p className="prose mt-6 dark:prose-invert">
-          I'm Earl, better known as Earl The Kaiju. I weave visual narratives through graphic arts and streamline user experiences as a front-end developer. When I'm not crafting designs or code, I'm on the mat, competing and sharing my passion for Jiu-Jitsu with others. It's been a thrilling journey so far and it's only getting better!
+          I&apos;m Earl, better known as Earl The Kaiju. I weave visual narratives through graphic arts and streamline user experiences as a front-end developer. When I&apos;m not crafting designs or code, I&apos;m on the mat, competing and sharing my passion for Jiu-Jitsu with others. It&apos;s been a thrilling journey so far and it&apos;s only getting better!
           </p>
 
           <div className="mt-6 flex gap-6">
