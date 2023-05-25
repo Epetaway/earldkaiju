@@ -63,9 +63,9 @@ jobs:
 
       # Upload artifact
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: ./.next
+          path: ./out
 
   deploy:
     environment:
