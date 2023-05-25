@@ -49,27 +49,15 @@ jobs:
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
 
-      # Build Tailwind CSS
-      - name: Build CSS
-        run: npx tailwindcss build -o styles.css
       # Build with Next.js
       - name: Build with Next.js
         run: yarn next build
 
-      # Setup pages
-      - name: Setup Pages
-        uses: actions/setup-node@v3
-        with:
-          static_site_generator: next
-
-      # Export static HTML
-      - name: Export static HTML
-        run: yarn next export
-
       # Upload artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
+          name: nextjs-out
           path: out
 
   deploy:
@@ -82,12 +70,15 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          path: out
+          name: nextjs-out
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
 
       # Set environment URL
       - name: Set Environment URL
