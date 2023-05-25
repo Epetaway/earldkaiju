@@ -63,9 +63,17 @@ jobs:
       - name: Export static HTML
         run: yarn next export
 
+      # Install dependencies for server
+      - name: Install server dependencies
+        run: cd ./.next && yarn install --production
+
+      # Start Next.js server
+      - name: Start Next.js server
+        run: cd ./.next && yarn next start
+
       # Upload artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v1
         with:
           path: out
 
