@@ -22,12 +22,39 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
+
       # Setup Node.js environment
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: yarn
+
+       - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
 
       # Restore cache
       - name: Restore Cache
@@ -42,23 +69,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      # Print Node.js and package versions
-      - name: Print Node.js and package versions
-        run: |
-          node --version
-          yarn --version
-          yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
+
 
       # Build with Next.js
       - name: Build with Next.js
         run: yarn next build
 
-
-       # Setup pages
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: next
 
       # Export static HTML
       - name: Export static HTML
