@@ -1,14 +1,12 @@
-import nextMDX from '@next/mdx';
 import remarkGfm from 'remark-gfm';
 import rehypePrismPlus from 'rehype-prism-plus';
 import remarkCodeTitles from './src/lib/remark-code-title.mjs';
 import rehypePresetMinify from 'rehype-preset-minify';
+import nextMDX from '@next/mdx';
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
-  swcMinify: true,
 };
 
 const withMDX = nextMDX({
@@ -16,7 +14,6 @@ const withMDX = nextMDX({
   options: {
     remarkPlugins: [remarkGfm, remarkCodeTitles],
     rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
-    providerImportSource: '@mdx-js/react',
   },
 });
 

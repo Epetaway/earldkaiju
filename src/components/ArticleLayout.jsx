@@ -89,4 +89,4 @@ const ArticleLayoutComponent = ({
 
 const ArticleLayout = dynamic(() => Promise.resolve(ArticleLayoutComponent), { ssr: false })
 
-export { ArticleLayout }
+export default ArticleLayout;

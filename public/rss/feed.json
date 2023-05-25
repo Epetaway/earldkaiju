@@ -7,28 +7,5 @@
     "author": {
         "name": "Brian Ketelsen"
     },
-    "items": [
-        {
-            "id": "undefined/articles/being-black-jiujitsu",
-            "content_html": "",
-            "url": "undefined/articles/being-black-jiujitsu",
-            "title": "Being Black in Jiu-Jitsu",
-            "summary": "Encouraging a community of people that this martial art is perfect for us to be better and survive in this world that we live in.",
-            "date_modified": "2023-05-23T00:00:00.000Z",
-            "author": {
-                "name": "Brian Ketelsen"
-            }
-        },
-        {
-            "id": "undefined/articles/what-is-jiu-jitsu",
-            "content_html": "",
-            "url": "undefined/articles/what-is-jiu-jitsu",
-            "title": "What is Jiu-Jitsu",
-            "summary": "What is Jiu-Jitsu",
-            "date_modified": "2023-05-23T00:00:00.000Z",
-            "author": {
-                "name": "Brian Ketelsen"
-            }
-        }
-    ]
+    "items": []
 }

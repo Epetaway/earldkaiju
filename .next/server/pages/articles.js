@@ -33,13 +33,6 @@ module.exports = require("next/dist/shared/lib/app-router-context.js");
 
 /***/ }),
 
-/***/ 5832:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/loadable.js");
-
-/***/ }),
-
 /***/ 4964:
 /***/ ((module) => {
 
@@ -96,24 +89,10 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 1853:
-/***/ ((module) => {
-
-module.exports = require("next/router");
-
-/***/ }),
-
 /***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ 7834:
-/***/ ((module) => {
-
-module.exports = import("@mdx-js/react");;
 
 /***/ }),
 

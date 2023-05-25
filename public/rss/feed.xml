@@ -4,7 +4,7 @@
         <title>Brian Ketelsen</title>
         <link>undefined</link>
         <description>Brian Ketelsen - Blog</description>
-        <lastBuildDate>Thu, 25 May 2023 12:31:45 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 May 2023 13:56:51 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,21 +13,5 @@
             <link>undefined</link>
         </image>
         <copyright>All rights reserved 2023</copyright>
-        <item>
-            <title><![CDATA[Being Black in Jiu-Jitsu]]></title>
-            <link>undefined/articles/being-black-jiujitsu</link>
-            <guid>undefined/articles/being-black-jiujitsu</guid>
-            <pubDate>Tue, 23 May 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Encouraging a community of people that this martial art is perfect for us to be better and survive in this world that we live in.]]></description>
-            <author>me@brian.dev (Brian Ketelsen)</author>
-        </item>
-        <item>
-            <title><![CDATA[What is Jiu-Jitsu]]></title>
-            <link>undefined/articles/what-is-jiu-jitsu</link>
-            <guid>undefined/articles/what-is-jiu-jitsu</guid>
-            <pubDate>Tue, 23 May 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[What is Jiu-Jitsu]]></description>
-            <author>me@brian.dev (Brian Ketelsen)</author>
-        </item>
     </channel>
 </rss>
