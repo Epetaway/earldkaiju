@@ -62,7 +62,7 @@ jobs:
 
       - name: Install Next.js and MDX dependencies
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
+          yarn add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
 
       - name: Update next.config.js
         run: |
@@ -73,10 +73,10 @@ jobs:
           }" > next.config.js
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: yarn next build
 
       - name: Static HTML export with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export
+        run: yarn next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
