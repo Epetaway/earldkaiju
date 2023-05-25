@@ -11,81 +11,73 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "deploy-pages"
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checkout code
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      # Setup Node.js environment
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_ENV
+            echo "command=install" >> $GITHUB_ENV
+            echo "runner=yarn" >> $GITHUB_ENV
+          elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
+            echo "manager=npm" >> $GITHUB_ENV
+            echo "command=ci" >> $GITHUB_ENV
+            echo "runner=npx --no-install" >> $GITHUB_ENV
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: yarn
+          cache: ${{ env.manager }}
 
-      # Restore cache
-      - name: Restore Cache
-        uses: actions/cache@v2
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
         with:
-          path: .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
+          static_site_generator: next
+
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
-      # Install dependencies
       - name: Install dependencies
-        run: yarn install
+        run: ${{ env.manager }} ${{ env.command }}
 
-      # Print Node.js and package versions
-      - name: Print Node.js and package versions
-        run: |
-          node --version
-          yarn --version
-          yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
-
-      # Build with Next.js
       - name: Build with Next.js
-        run: yarn next build
+        run: ${{ env.runner }} next build
 
-      # Generate static site
-      - name: Export static site
-        run: yarn next export
+      - name: Static HTML export with Next.js
+        run: ${{ env.runner }} next export
 
-  # Deployment job
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./out
+
   deploy:
-    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build and Export static site
-        run: |
-          yarn next build
-          yarn next export
-
-      # Configure Git
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+        id: deployment
+        uses: actions/deploy-pages@v2
