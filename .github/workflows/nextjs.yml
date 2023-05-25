@@ -61,7 +61,7 @@ jobs:
 
       # Export static HTML
       - name: Export static HTML
-        run: yarn next build && yarn next export
+        run: yarn next export
 
       # Upload artifact
       - name: Upload artifact
