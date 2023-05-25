@@ -49,9 +49,6 @@ jobs:
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
 
-      # Build with Next.js
-      - name: Build with Next.js
-        run: yarn next build
 
       # Setup pages
       - name: Setup Pages
@@ -59,9 +56,6 @@ jobs:
         with:
           static_site_generator: next
 
-      # Export static HTML
-      - name: Export static HTML
-        run: yarn next export
 
       # Install dependencies for Next.js server
       - name: Install Next.js server dependencies
@@ -74,6 +68,20 @@ jobs:
         run: |
           cd ./.next
           yarn next start
+
+      # Build with Next.js
+      - name: Build with Next.js
+        run: yarn next build
+
+       # Setup pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          static_site_generator: next
+
+      # Export static HTML
+      - name: Export static HTML
+        run: yarn next export
 
       # Upload artifact
       - name: Upload artifact
