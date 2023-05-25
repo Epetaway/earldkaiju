@@ -75,7 +75,7 @@ jobs:
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
 
-          
+
       - name: Build with Next.js
         run: yarn next build
 
@@ -90,7 +90,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./out
+          path: out
 
   deploy:
     environment:
