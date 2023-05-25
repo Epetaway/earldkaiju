@@ -35,7 +35,7 @@ jobs:
       - name: Build with Next.js
         run: yarn next build
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           path: ./.next
 
@@ -46,11 +46,11 @@ jobs:
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v3
         with:
           path: ./.next
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
       - name: Set Environment URL
         run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
