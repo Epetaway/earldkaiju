@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/d9Cwn8pUBWQglAczNbv3a/_buildManifest.js",
-    "static/d9Cwn8pUBWQglAczNbv3a/_ssgManifest.js"
+    "static/LVYy1x_XwQDl6ods5L5Ow/_buildManifest.js",
+    "static/LVYy1x_XwQDl6ods5L5Ow/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -45,13 +45,15 @@
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-285f56d3e46ff5e9.js",
-      "static/chunks/pages/articles/being-black-jiujitsu-dcfb2e7fd0a2d466.js"
+      "static/chunks/295-728df0fe0e7396c7.js",
+      "static/chunks/pages/articles/being-black-jiujitsu-5400423c64ae6c60.js"
     ],
     "/articles/what-is-jiu-jitsu": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-285f56d3e46ff5e9.js",
-      "static/chunks/pages/articles/what-is-jiu-jitsu-8d1e27a71908ef4e.js"
+      "static/chunks/295-728df0fe0e7396c7.js",
+      "static/chunks/pages/articles/what-is-jiu-jitsu-8cbf4d358546327a.js"
     ],
     "/projects": [
       "static/chunks/webpack-b8f8d6679aaa5f42.js",
