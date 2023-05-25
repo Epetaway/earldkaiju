@@ -5,7 +5,7 @@ import remarkCodeTitles from './src/lib/remark-code-title.mjs'
 import rehypePresetMinify from 'rehype-preset-minify'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['jsx', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
