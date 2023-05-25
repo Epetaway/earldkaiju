@@ -51,6 +51,6 @@ jobs:
           path: ./.next
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v2
       - name: Set Environment URL
         run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
