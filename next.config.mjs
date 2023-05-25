@@ -4,6 +4,11 @@ import remarkCodeTitles from './src/lib/remark-code-title.mjs';
 import rehypePresetMinify from 'rehype-preset-minify';
 import nextMDX from '@next/mdx';
 
+const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  reactStrictMode: false,
+};
+
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
@@ -12,13 +17,4 @@ const withMDX = nextMDX({
   },
 });
 
-const nextConfig = {
-  output: 'export',
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  reactStrictMode: true,
-  images: {
-    unoptimized: true,
-  },
-};
-
-module.exports = withMDX(nextConfig);
+export default withMDX(nextConfig);
