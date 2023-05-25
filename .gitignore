@@ -1,0 +1,23 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore build directory
+/dist
+
+# Ignore log files
+*.log
+
+# Ignore the .cache directory (used by some build tools)
+.cache/
+
+# Ignore the public directory (used by some frameworks like Gatsby)
+/public
+
+# Ignore the .next directory (used by Next.js)
+.next/
