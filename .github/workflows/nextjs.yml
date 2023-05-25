@@ -61,10 +61,6 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
         with:
           static_site_generator: next
-      - name: Install MDX dependencies
-        run: ${{ env.detect-package-manager.runner }} install remark-gfm rehype-prism-plus rehype-preset-minify next-mdx
-      - name: Install additional dependencies
-        run: ${{ env.detect-package-manager.runner }} install remark-code-title
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -76,11 +72,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: ${{ env.detect-package-manager.manager }} ${{ env.detect-package-manager.command }}
+        run: ${{ env.detect-package-manager.runner }} ${{ env.detect-package-manager.command }}
       - name: Build with Next.js
-        run: ${{ env.detect-package-manager.runner }} next build
+        run: yarn next build
       - name: Static HTML export with Next.js
-        run: ${{ env.detect-package-manager.runner }} next export
+        run: yarn next export
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
