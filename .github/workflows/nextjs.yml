@@ -68,6 +68,14 @@ jobs:
             }
           }" > next.config.js
 
+      # Print Node.js and package versions
+      - name: Print Node.js and package versions
+        run: |
+          node --version
+          yarn --version
+          yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
+
+          
       - name: Build with Next.js
         run: yarn next build
 
