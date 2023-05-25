@@ -33,13 +33,11 @@ jobs:
         run: yarn install
       - name: Build with Next.js
         run: yarn next build
-      - name: Static HTML export with Next.js
-        run: yarn next export
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: website
-          path: ./out
+          path: ./.next
 
   deploy:
     environment:
@@ -59,4 +57,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./.next
