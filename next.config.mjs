@@ -8,9 +8,6 @@ const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
-  },
 };
 
 const withMDX = nextMDX({
