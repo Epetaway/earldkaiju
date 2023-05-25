@@ -49,6 +49,9 @@ jobs:
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
 
+      # Build Tailwind CSS
+      - name: Build CSS
+        run: npx tailwindcss build -o styles.css
       # Build with Next.js
       - name: Build with Next.js
         run: yarn next build
