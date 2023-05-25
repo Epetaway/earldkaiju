@@ -63,13 +63,13 @@ jobs:
       - name: Export static HTML
         run: yarn next export
 
-      # Install dependencies for server
-      - name: Install server dependencies
-        run: cd ./.next && yarn install --production
+      # Install Next.js globally
+      - name: Install Next.js globally
+        run: yarn global add next
 
       # Start Next.js server
       - name: Start Next.js server
-        run: cd ./.next && yarn next start
+        run: next start ./.next
 
       # Upload artifact
       - name: Upload artifact
