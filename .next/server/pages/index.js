@@ -578,6 +578,13 @@ module.exports = require("next/dist/shared/lib/image-loader");
 
 /***/ }),
 
+/***/ 5832:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/loadable.js");
+
+/***/ }),
+
 /***/ 4964:
 /***/ ((module) => {
 
@@ -645,6 +652,13 @@ module.exports = require("next/dist/shared/lib/utils.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils/warn-once.js");
+
+/***/ }),
+
+/***/ 1853:
+/***/ ((module) => {
+
+module.exports = require("next/router");
 
 /***/ }),
 

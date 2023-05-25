@@ -75,9 +75,22 @@ export default function ArticlesIndex({ articles }) {
 }
 
 export async function getStaticProps() {
+  const articles = await getAllArticles();
+
+  articles.forEach(article => {
+    if (!article.date) {
+      console.error(`Missing date for article: ${article.slug}`);
+    } else {
+      const date = new Date(article.date);
+      if (isNaN(date.getTime())) {
+        console.error(`Invalid date for article: ${article.slug}`);
+      }
+    }
+  });
+
   return {
     props: {
-      articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
+      articles: articles.map(({ component, ...meta }) => meta),
     },
   }
 }
