@@ -18,54 +18,46 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checkout code
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Setup Node.js environment
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: yarn
 
-      # Restore cache
-      - name: Restore Cache
-        uses: actions/cache@v3
-        with:
-          path: .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-
-          
-      # Install dependencies
-      - name: Install dependencies
-        run: yarn install
-
-      # Print Node.js and package versions
       - name: Print Node.js and package versions
         run: |
           node --version
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
 
-      # Build and export static site
+      - name: Restore Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-
+
+      - name: Install dependencies
+        run: yarn install
+
       - name: Build with Next.js
         run: yarn next build
-      - name: Static HTML export with Next.js
+
+      - name: Export Next.js static site
         run: yarn next export
 
-      # Setup pages
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: next
+      - name: Copy public folder
+        run: cp -R public .next/
 
-      # Upload artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-          path: ./out
+          name: website
+          path: ./.next
 
   deploy:
     environment:
@@ -73,17 +65,25 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # Download artifact
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
+          name: website
           path: ./.next
 
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Configure Git
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
 
-      # Set environment URL
+      - name: Deploy to GitHub Pages
+        run: |
+          cd ./.next
+          git init
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git branch -M main
+          git push -f https://github.com/${{ github.repository }}.git main:gh-pages
+
       - name: Set Environment URL
-        run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
+        run: echo "URL=https://${{ github.repository_owner }}.github.io/${{ github.repository }}" >> $GITHUB_ENV
