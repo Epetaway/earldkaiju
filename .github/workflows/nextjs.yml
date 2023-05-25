@@ -62,9 +62,9 @@ jobs:
         with:
           static_site_generator: next
       - name: Install MDX dependencies
-        run: ${{ env.detect-package-manager.runner }} add remark-gfm rehype-prism-plus rehype-preset-minify @next/mdx
+        run: ${{ env.detect-package-manager.runner }} install remark-gfm rehype-prism-plus rehype-preset-minify @next/mdx
       - name: Install additional dependencies
-        run: ${{ env.detect-package-manager.runner }} add remark-code-title
+        run: ${{ env.detect-package-manager.runner }} install remark-code-title
       - name: Restore cache
         uses: actions/cache@v3
         with:
