@@ -1,9 +1,9 @@
 {
-  "/about": "pages/about.html",
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/articles/post-1": "pages/articles/post-1.html",
   "/_app": "pages/_app.js",
+  "/about": "pages/about.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/articles/post-1": "pages/articles/post-1.html",
   "/projects": "pages/projects.html",
   "/thank-you": "pages/thank-you.html",
   "/articles": "pages/articles.js",
