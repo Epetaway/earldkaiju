@@ -73,8 +73,9 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "youremail@example.com"
+          git config --global user.name "epetaway"
+          git config --global user.email "epetaway@gmail.com"
+          git remote add origin https://github.com/${{ github.repository }}.git
 
       - name: Deploy to GitHub Pages
         run: |
@@ -83,7 +84,7 @@ jobs:
           git add .
           git commit -m "Deploy to GitHub Pages"
           git branch -M main
-          git push -f https://github.com/${{ github.repository }}.git main:gh-pages
+          git push -f origin main:gh-pages
 
       - name: Set Environment URL
         run: echo "URL=https://${{ github.repository_owner }}.github.io/${{ github.repository }}" >> $GITHUB_ENV
