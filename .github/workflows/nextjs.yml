@@ -35,22 +35,17 @@ jobs:
       - name: Build with Next.js
         run: yarn next build
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v1
         with:
           path: ./.next
 
   deploy:
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          path: ./.next
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-      - name: Set Environment URL
-        run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
