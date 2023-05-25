@@ -60,33 +60,7 @@ jobs:
         run: |
           yarn add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
 
-   - name: Update next.config.js
-        run: |
-          echo "const remarkGfm = require('remark-gfm');
-          const remarkCodeTitles = require('./src/lib/remark-code-title.mjs');
-          const rehypePrismPlus = require('rehype-prism-plus');
-          const rehypePresetMinify = require('rehype-preset-minify');
-          const nextMDX = require('@next/mdx');
-
-          const withMDX = nextMDX({
-            extension: /\.mdx?$/,
-            options: {
-              remarkPlugins: [remarkGfm, remarkCodeTitles],
-              rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
-            },
-          });
-
-          const nextConfig = {
-            output: 'export',
-            pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-            reactStrictMode: true,
-            images: {
-              unoptimized: true,
-            },
-          };
-
-          module.exports = withMDX(nextConfig);" > next.config.js
-          
+   
       # Print Node.js and package versions
       - name: Print Node.js and package versions
         run: |
