@@ -61,10 +61,19 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Install Next.js and MDX dependencies
-        run: yarn add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
+
+      - name: Update next.config.js
+        run: |
+          echo "module.exports = {
+            experimental: {
+              images: true
+            }
+          }" > next.config.js
 
       - name: Build with Next.js
-        run: yarn next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
