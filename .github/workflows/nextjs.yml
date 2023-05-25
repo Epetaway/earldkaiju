@@ -43,10 +43,6 @@ jobs:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: next
 
       - name: Restore cache
         uses: actions/cache@v3
@@ -74,6 +70,11 @@ jobs:
 
       - name: Build with Next.js
         run: yarn next build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          static_site_generator: next
 
       - name: Static HTML export with Next.js
         run: yarn next export
