@@ -88,8 +88,4 @@ jobs:
 
       # Set environment URL
       - name: Set Environment URL
-        run: |
-          cd ./.next
-          yarn install --production
-          yarn next start
-          echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
+        run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
