@@ -1,4 +1,4 @@
-import { loader } from 'next/dist/compiled/webpack/5'
+import { getImageLoader } from 'next/image';
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -11,7 +11,7 @@ import {
   MastodonIcon,
 } from '@/components/SocialIcons'
 
-const portraitImage = loader('@/images/earl-head.png')
+const portraitImage = imageLoader('@/images/earl-head.png')
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
 
