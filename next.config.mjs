@@ -21,7 +21,7 @@ const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [remarkGfm, remarkCodeTitles],
-    rehypePlugins: [rehypePrismPlus, rehypePreset-minify],
+    rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
   },
 });
 
