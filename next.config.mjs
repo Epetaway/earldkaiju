@@ -6,7 +6,7 @@ import nextMDX from '@next/mdx';
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  reactStrictMode: false,
+  reactStrictMode: true,
 };
 
 const withMDX = nextMDX({
