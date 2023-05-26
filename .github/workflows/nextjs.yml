@@ -55,12 +55,16 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
+      - name: Install Tailwind CSS
+        run: yarn add tailwindcss
+
+
       - name: Install Next.js and MDX dependencies
         run: |
           yarn add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
           yarn add tailwindcss
 
-      
+
 
       # Print Node.js and package versions
       - name: Print Node.js and package versions
