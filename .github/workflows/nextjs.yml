@@ -77,6 +77,9 @@ jobs:
         with:
           static_site_generator: next
 
+      - name: Copy images directory
+        run: cp -R src/images out/
+
       - name: Static HTML export with Next.js
         run: yarn next export
 
