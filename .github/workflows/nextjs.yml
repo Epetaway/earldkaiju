@@ -61,7 +61,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: ${{ env.manager }} ${{ env.command }}
+        run: npm install yarn install ${{ env.manager }} ${{ env.command }}
       - name: Build with Next.js
         run: ${{ env.runner }} next build
       - name: Static HTML export with Next.js
