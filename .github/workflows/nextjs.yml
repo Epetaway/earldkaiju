@@ -43,25 +43,25 @@ jobs:
           path: ./out
 
   # Deployment job
-  deploy:
+ deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: Checkout
-        uses: actions/checkout@v2
-
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: nextjs-out
-          path: out
+          name: website
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          branch: gh-pages
+          target_folder: './'
+          source_folder: website
 
 
 
