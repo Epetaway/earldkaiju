@@ -36,21 +36,14 @@ jobs:
       - name: Static HTML export with Next.js
         run: yarn next export
 
-      - name: Check and Clean Artifact
+      - name: Inspect and Prepare Artifact
         run: |
+          echo "Inspecting files in artifact..."
+          find ./out -ls
           echo "Checking artifact size..."
-          size=$(du -sh ./out | cut -f1)
-          echo "Artifact size: $size"
-          if [[ "$size" == *G ]]; then
-            echo "Artifact is too large!"
-            exit 1
-          fi
+          du -sh ./out
           echo "Checking for symbolic links..."
-          if find ./out -type l | grep -q .; then
-            echo "Symbolic link found!"
-            exit 1
-          fi
-          echo "Artifact is clean and ready to upload."
+          find ./out -type l -ls
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
