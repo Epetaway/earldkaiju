@@ -69,9 +69,6 @@ jobs:
           node --version
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
-      - name: Copy images directory
-        run: cp -R src/images public/
-
       - name: Build with Next.js
         run: yarn next build
 
