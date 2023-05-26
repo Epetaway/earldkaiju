@@ -11,7 +11,7 @@ exports.modules = {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/earl-head.9565bae6.png","height":1794,"width":1776,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAKlBMVEU3Nze/v7+5ubm0tLQsLCzKysrc3NyqqqqWlpZFRUVaWlpmZmZQUFDS0tJqXOc0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAN0lEQVR4nAXBAQIAIAQEwXVIKf//bjOUS26ZuKx5NbgVES+RbkAP2gC+sH3gzEKyG+yFLL3j5AcoQQElCjGXsAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/Tailwind-Site//_next/static/media/earl-head.9565bae6.png","height":1794,"width":1776,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAKlBMVEU3Nze/v7+5ubm0tLQsLCzKysrc3NyqqqqWlpZFRUVaWlpmZmZQUFDS0tJqXOc0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAN0lEQVR4nAXBAQIAIAQEwXVIKf//bjOUS26ZuKx5NbgVES+RbkAP2gC+sH3gzEKyG+yFLL3j5AcoQQElCjGXsAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
