@@ -1,3 +1,4 @@
+import { loader } from 'next/dist/compiled/webpack/5';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Gallery } from '@/components/Gallery';
@@ -6,30 +7,30 @@ const loadImages = async () => {
   const images = [];
 
   // Fetch images from folder 1
-  const folder1Images = require.context('src/images/illustrations', false, /\.(png|jpe?g|svg)$/);
-  folder1Images.keys().forEach((filename) => {
-    const image = folder1Images(filename);
-    const tags = ['Illustrations']; // Replace with desired tags for folder 1
+  const folder1Images = require.context('@/images/illustrations', false, /\.(png|jpe?g|svg)$/);
+folder1Images.keys().forEach((filename) => {
+  const image = folder1Images(filename);
+  const tags = ['Illustrations']; // Replace with desired tags for folder 1
 
-    images.push({
-      src: image.default,
-      caption: 'Digital Art',
-      tags: tags,
-    });
+  images.push({
+    src: loader(image.default),
+    caption: 'Digital Art',
+    tags: tags,
   });
+});
 
   // Fetch images from folder 2
-  const folder3Images = require.context('src/images/designs', false, /\.(png|jpe?g|svg)$/);
-  folder3Images.keys().forEach((filename) => {
-    const image = folder3Images(filename);
-    const tags = ['Design']; // Replace with desired tags for folder 3
+const folder3Images = require.context('@/images/designs', false, /\.(png|jpe?g|svg)$/);
+folder3Images.keys().forEach((filename) => {
+  const image = folder3Images(filename);
+  const tags = ['Design']; // Replace with desired tags for folder 2
 
-    images.push({
-      src: image.default,
-      caption: 'Design',
-      tags: tags,
-    });
+  images.push({
+    src: loader(image.default),
+    caption: 'Design',
+    tags: tags,
   });
+});
 
   return images;
 };

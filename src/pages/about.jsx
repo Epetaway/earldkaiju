@@ -1,3 +1,4 @@
+import { loader } from 'next/dist/compiled/webpack/5'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -10,6 +11,7 @@ import {
   MastodonIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/earl-head.png'
+const portraitImage = loader('@/images/earl-head.png')
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
 

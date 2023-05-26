@@ -1,3 +1,4 @@
+import { loader } from 'next/dist/compiled/webpack/5'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -10,6 +11,11 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
+const image3 = loader('@/images/photos/me.jpeg')
+const image2 = loader('@/images/photos/justMe.png')
+const image1 = loader('@/images/photos/us.jpeg')
+const image5 = loader('@/images/photos/MeBjj_2.jpg')
+const image4 = loader('@/images/photos/BjjClass.jpg')
 
 import image3 from '@/images/photos/me.jpeg'
 import image2 from '@/images/photos/justMe.png'
