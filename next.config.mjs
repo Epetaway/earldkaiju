@@ -15,10 +15,10 @@ const nextConfig = {
   // Use the repo as the assetPrefix and basePath
   assetPrefix: isProd ? `/${repo}/` : '',
   basePath: isProd ? `/${repo}` : '',
-  // Add the images.unoptimized option
-  images: {
-    unoptimized: true,
-  },
+  // Comment out the images.unoptimized option, it is not supported yet
+  // images: {
+  //  unoptimized: true,
+  //},
 };
 
 const withMDX = nextMDX({
