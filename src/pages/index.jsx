@@ -17,11 +17,7 @@ const image1 = loader('@/images/photos/us.jpeg')
 const image5 = loader('@/images/photos/MeBjj_2.jpg')
 const image4 = loader('@/images/photos/BjjClass.jpg')
 
-import image3 from '@/images/photos/me.jpeg'
-import image2 from '@/images/photos/justMe.png'
-import image1 from '@/images/photos/us.jpeg'
-import image5 from '@/images/photos/MeBjj_2.jpg'
-import image4 from '@/images/photos/BjjClass.jpg'
+
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
