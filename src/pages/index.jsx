@@ -1,7 +1,7 @@
 import { getImageLoader } from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
-import Image from 'next/image'
+
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { Container } from '@/components/Container';
@@ -13,11 +13,14 @@ import {
 
 const imageLoader = getImageLoader({});
 
-const image3 = imageLoader('@/images/photos/me.jpeg');
-const image2 = imageLoader('@/images/photos/justMe.png');
-const image1 = imageLoader('@/images/photos/us.jpeg');
-const image5 = imageLoader('@/images/photos/MeBjj_2.jpg');
-const image4 = imageLoader('@/images/photos/BjjClass.jpg');
+const image3 = imageLoader('/images/photos/me.jpeg');
+const image2 = imageLoader('/images/photos/justMe.png');
+const image1 = imageLoader('/images/photos/us.jpeg');
+const image5 = imageLoader('/images/photos/MeBjj_2.jpg');
+const image4 = imageLoader('/images/photos/BjjClass.jpg');
+
+// Rest of the code...
+
 
 // Rest of the code...
 

@@ -11,7 +11,7 @@ import {
   MastodonIcon,
 } from '@/components/SocialIcons'
 
-const portraitImage = imageLoader('@/images/earl-head.png')
+const portraitImage = imageLoader('/images/earl-head.png')
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
 
