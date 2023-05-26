@@ -60,8 +60,7 @@ jobs:
           yarn add @next/mdx @mdx-js/loader @mdx-js/react remark-gfm remark-code-titles rehype-prism-plus rehype-preset-minify
           yarn add tailwindcss
 
-      - name: Create Tailwind CSS configuration file
-        run: npx tailwindcss init
+      
 
       # Print Node.js and package versions
       - name: Print Node.js and package versions
