@@ -43,19 +43,22 @@ jobs:
           path: ./out
 
   deploy:
-    needs: build
+     environment:
+      name: github-pages
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: Download build artifact
+      # Download artifact
+      - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: website
-          path: ./out
+          path: ./.next
 
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          folder: ./out
-          commit_message: "Deploy website"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Set environment URL
+      - name: Set Environment URL
+        run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
