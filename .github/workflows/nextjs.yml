@@ -36,31 +36,50 @@ jobs:
       - name: Static HTML export with Next.js
         run: yarn next export
 
+      - name: Check and Clean Artifact
+        run: |
+          echo "Checking artifact size..."
+          size=$(du -sh ./out | cut -f1)
+          echo "Artifact size: $size"
+          if [[ "$size" == *G ]]; then
+            echo "Artifact is too large!"
+            exit 1
+          fi
+          echo "Checking for symbolic links..."
+          if find ./out -type l | grep -q .; then
+            echo "Symbolic link found!"
+            exit 1
+          fi
+          echo "Artifact is clean and ready to upload."
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
           name: website
           path: ./out
 
+  # Deployment job
   deploy:
-    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      # Download artifact
-      - name: Download artifact
+      - name: Download build artifact
         uses: actions/download-artifact@v2
         with:
           name: website
-          path: ./.next
+          path: ./out
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: website
-
-      # Set environment URL
-      - name: Set Environment URL
-        run: echo "URL=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_ENV
+          target_branch: 'gh-pages'
+          keep_history: true
+          enable_pull_request_comment: false
+          enable_commit: false
+          enable_deployment_status: false
