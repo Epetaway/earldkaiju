@@ -15,10 +15,6 @@ const nextConfig = {
   // Use the repo as the assetPrefix and basePath
   assetPrefix: isProd ? `/${repo}/` : '',
   basePath: isProd ? `/${repo}` : '',
-  // Comment out the images.unoptimized option, it is not supported yet
-  // images: {
-  //  unoptimized: true,
-  //},
 };
 
 const withMDX = nextMDX({
@@ -27,8 +23,8 @@ const withMDX = nextMDX({
     remarkPlugins: [remarkGfm, remarkCodeTitles],
     rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  // ... your other configurations
-  experimental: { esmExternals: true },
+    // ... your other configurations
+    experimental: { esmExternals: true },
   },
 });
 
