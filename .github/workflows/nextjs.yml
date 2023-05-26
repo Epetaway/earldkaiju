@@ -50,6 +50,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+    - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: nextjs-out
+          path: out
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
