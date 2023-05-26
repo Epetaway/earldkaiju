@@ -26,6 +26,9 @@ const withMDX = nextMDX({
   options: {
     remarkPlugins: [remarkGfm, remarkCodeTitles],
     rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
+    pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  // ... your other configurations
+  experimental: { esmExternals: true },
   },
 });
 
