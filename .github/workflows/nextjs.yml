@@ -62,10 +62,16 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: npm install yarn install ${{ env.manager }} ${{ env.command }}
+         # Print Node.js and package versions
+      - name: Print Node.js and package versions
+        run: |
+          node --version
+          yarn --version
+          yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
       - name: Build with Next.js
-        run: ${{ env.runner }} next build
+        run: yarn next build
       - name: Static HTML export with Next.js
-        run: ${{ env.runner }} next export
+        run: yarn next export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
