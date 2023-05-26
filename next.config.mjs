@@ -24,7 +24,7 @@ const withMDX = nextMDX({
     rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
     // ... your other configurations
-    experimental: { esmExternals: true },
+    experimental: { esmExternals: false },
   },
 });
 
