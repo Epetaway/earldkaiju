@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   MastodonIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/public/fixed/images/earl-head.pngearl-head.png'
+import portraitImage from '@/images/earl-head.png'
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
 

@@ -11,11 +11,11 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 
-import image3 from '@/public/fixed/images/photos/me.jpeg'
-import image2 from '@/public/fixed/images/photos/justMe.png'
-import image1 from '@/public/fixed/images/photos/us.jpeg'
-import image5 from '@/public/fixed/images/photos/MeBjj_2.jpg'
-import image4 from '@/public/fixed/images/photos/BjjClass.jpg'
+import image3 from '@/images/photos/me.jpeg'
+import image2 from '@/images/photos/justMe.png'
+import image1 from '@/images/photos/us.jpeg'
+import image5 from '@/images/photos/MeBjj_2.jpg'
+import image4 from '@/images/photos/BjjClass.jpg'
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
