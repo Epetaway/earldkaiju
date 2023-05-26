@@ -69,6 +69,9 @@ jobs:
           node --version
           yarn --version
           yarn list @next/mdx @mdx-js/loader @mdx-js/react remark-gfm rehype-prism-plus rehype-preset-minify
+      - name: Copy images directory
+        run: cp -R src/images public/
+
       - name: Build with Next.js
         run: yarn next build
 
@@ -76,9 +79,6 @@ jobs:
         uses: actions/configure-pages@v3
         with:
           static_site_generator: next
-
-      - name: Copy images directory
-        run: cp -R src/images out/
 
       - name: Static HTML export with Next.js
         run: yarn next export
