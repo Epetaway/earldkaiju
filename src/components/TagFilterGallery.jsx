@@ -6,7 +6,7 @@ const loadImages = async () => {
   const images = [];
 
   // Fetch images from folder 1
-  const folder1Images = require.context('src/images/illustrations', false, /\.(png|jpe?g|svg)$/);
+  const folder1Images = require.context('public/fixed/images/illustrations', false, /\.(png|jpe?g|svg)$/);
   folder1Images.keys().forEach((filename) => {
     const image = folder1Images(filename);
     const tags = ['Illustrations']; // Replace with desired tags for folder 1
@@ -19,7 +19,7 @@ const loadImages = async () => {
   });
 
   // Fetch images from folder 2
-  const folder3Images = require.context('src/images/designs', false, /\.(png|jpe?g|svg)$/);
+  const folder3Images = require.context('public/fixed/images/designs', false, /\.(png|jpe?g|svg)$/);
   folder3Images.keys().forEach((filename) => {
     const image = folder3Images(filename);
     const tags = ['Design']; // Replace with desired tags for folder 3
