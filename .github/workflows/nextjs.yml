@@ -53,7 +53,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: npm install yarn install 
 
       - name: Install Tailwind CSS
         run: yarn add tailwindcss
@@ -75,8 +75,7 @@ jobs:
 
       - name: Build with Next.js
         run: yarn next build
-        env:
-          NODE_OPTIONS: "--require=tailwind.config.js"
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
