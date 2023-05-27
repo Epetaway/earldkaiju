@@ -1,4 +1,3 @@
-import { getImageLoader } from 'next/image';
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -10,8 +9,7 @@ import {
   LinkedInIcon,
   MastodonIcon,
 } from '@/components/SocialIcons'
-
-const portraitImage = imageLoader('/images/earl-head.png')
+import portraitImage from '@/images/earl-head.png'
 import siteMeta from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
 
