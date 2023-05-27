@@ -7,7 +7,6 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  MastodonIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/earl-head.png'
 import siteMeta from '@/data/siteMeta'
