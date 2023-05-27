@@ -21,3 +21,6 @@ node_modules/
 
 # Ignore the .next directory (used by Next.js)
 .next/
+
+# Ignore the Next.js configuration file
+next.config.js
