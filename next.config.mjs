@@ -4,17 +4,9 @@ import remarkCodeTitles from './src/lib/remark-code-title.mjs';
 import rehypePresetMinify from 'rehype-preset-minify';
 import nextMDX from '@next/mdx';
 
-const isProd = process.env.NODE_ENV === 'production';
-
-// Replace 'your-repo-name' with the name of your repository
-const repo = 'earldkaiju';
-
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
-  // Use the repo as the assetPrefix and basePath
-  assetPrefix: isProd ? `/${repo}/` : '',
-  basePath: isProd ? `/${repo}` : '',
   // Add the images.unoptimized option
   images: {
     unoptimized: true,
