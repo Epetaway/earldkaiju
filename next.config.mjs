@@ -7,7 +7,7 @@ import nextMDX from '@next/mdx';
 const isProd = process.env.NODE_ENV === 'production';
 
 // Replace 'your-repo-name' with the name of your repository
-const repo = 'Tailwind-Site';
+const repo = 'earldkaiju';
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
