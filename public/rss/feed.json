@@ -9,6 +9,17 @@
     },
     "items": [
         {
+            "id": "undefined/articles/post-2",
+            "content_html": "",
+            "url": "undefined/articles/post-2",
+            "title": "Embrace the Grind: Maximizing Your Potential in Jiu-Jitsu as a Hobby",
+            "summary": "This blog post is designed to inspire those taking up Brazilian Jiu-Jitsu (BJJ) as a hobby who crave growth and challenge. We delve into ways to optimize your environment, set personal goals, and how to foster your physical and mental strength, transforming BJJ from a hobby to a pathway of self-discovery and the pursuit of excellence.",
+            "date_modified": "2023-05-30T00:00:00.000Z",
+            "author": {
+                "name": "Brian Ketelsen"
+            }
+        },
+        {
             "id": "undefined/articles/post-1",
             "content_html": "",
             "url": "undefined/articles/post-1",

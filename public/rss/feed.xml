@@ -4,7 +4,7 @@
         <title>Brian Ketelsen</title>
         <link>undefined</link>
         <description>Brian Ketelsen - Blog</description>
-        <lastBuildDate>Sat, 27 May 2023 03:36:29 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 May 2023 22:17:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,14 @@
             <link>undefined</link>
         </image>
         <copyright>All rights reserved 2023</copyright>
+        <item>
+            <title><![CDATA[Embrace the Grind: Maximizing Your Potential in Jiu-Jitsu as a Hobby]]></title>
+            <link>undefined/articles/post-2</link>
+            <guid>undefined/articles/post-2</guid>
+            <pubDate>Tue, 30 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[This blog post is designed to inspire those taking up Brazilian Jiu-Jitsu (BJJ) as a hobby who crave growth and challenge. We delve into ways to optimize your environment, set personal goals, and how to foster your physical and mental strength, transforming BJJ from a hobby to a pathway of self-discovery and the pursuit of excellence.]]></description>
+            <author>me@brian.dev (Brian Ketelsen)</author>
+        </item>
         <item>
             <title><![CDATA[The Struggles of Training Jiu-Jitsu: Overcoming Complacency and Ego]]></title>
             <link>undefined/articles/post-1</link>

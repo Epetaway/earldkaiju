@@ -24,6 +24,7 @@ const ArticleLayoutComponent = ({
   meta,
   isRssFeed = false,
   previousPathname,
+
 }) => {
   const router = useRouter()
 
