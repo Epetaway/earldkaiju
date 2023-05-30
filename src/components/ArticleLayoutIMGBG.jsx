@@ -33,7 +33,7 @@ const ArticleLayoutComponent = ({
   }
 
   // Form the background image path from 'bgImg' and the images directory
-  const bgImagePath = `${process.env.ASSET_PREFIX}/fixed/images/postImg/${bgImg}`;
+  const bgImagePath = `https://www.dropbox.com/s/n4ma68yvy829p4p/${bgImg}?dl=0`;
 
   return (
     <>
