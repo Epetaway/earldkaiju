@@ -36,8 +36,8 @@ const ArticleLayoutComponent = ({
   }
 
   // Form the background image path from 'bgImg' and the images directory
-  const bgImagePath = `/fixed/postImg/${bgImg}`;
-  const authorImagePath = `/fixed/postImg/UJ_logo.svg`;
+  const bgImagePath = `/fixed/${bgImg}`;
+  const authorImagePath = `/fixed/UJ_logo.svg`;
 
   return (
     <>
