@@ -5,9 +5,10 @@ import rehypePresetMinify from 'rehype-preset-minify';
 import nextMDX from '@next/mdx';
 
 const nextConfig = {
+  output: 'export', // <-- IMPORTANT: enable static export for GitHub Pages
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
-  // Add the images.unoptimized option
+  trailingSlash: true, // <-- IMPORTANT: prevents broken URLs on GitHub Pages
   images: {
     unoptimized: true,
   },
