@@ -4,9 +4,9 @@
   "/about": "pages/about.html",
   "/projects": "pages/projects.html",
   "/thank-you": "pages/thank-you.html",
-  "/_error": "pages/_error.js",
-  "/articles/post-1": "pages/articles/post-1.html",
   "/articles/post-2": "pages/articles/post-2.html",
+  "/articles/post-1": "pages/articles/post-1.html",
+  "/_error": "pages/_error.js",
   "/articles": "pages/articles.js",
   "/": "pages/index.js",
   "/404": "pages/404.html"
