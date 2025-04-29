@@ -39,10 +39,10 @@ jobs:
             exit 1
           fi
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"  # Updated to Node 20 LTS
+          node-version: "20"
           cache: ${{ env.manager }}
 
       - name: Restore cache
