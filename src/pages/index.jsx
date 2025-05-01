@@ -238,11 +238,10 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl text-lg">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          Graphic artist, Front-end developer, and Jiu-Jitsu enthusiast.
+          Crafting Engaging Digital Experiences
           </h1>
           <p className="prose mt-6 dark:prose-invert">
-          I&apos;m Earl, better known as Earl The Kaiju. I weave visual narratives through graphic arts and streamline user experiences as a front-end developer. When I&apos;m not crafting designs or code, I&apos;m on the mat, competing and sharing my passion for Jiu-Jitsu with others. It&apos;s been a thrilling journey so far and it&apos;s only getting better!
-          </p>
+          Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey. With a passion for creating intuitive and responsive web interfaces, Earl combines technical expertise with creative problem-solving to deliver impactful digital solutions.​<br/><br/>Explore his work to see how he brings ideas to life through clean code and user-centric design.</p>
 
           <div className="mt-6 flex gap-6">
 

@@ -73,67 +73,25 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hey there! I&apos;m Earl Hickson Jr., a highly skilled Front End Web
-              Engineer with a strong background in Graphic Design.
+              More About Me
             </h1>
             <div className="prose mt-6 space-y-7 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400">
               <p>
-                But there&apos;s more to me than just my technical expertise. I have
-                a deep connection to the concept of kaiju that goes beyond the
-                surface-level imagery.
+              I&apos;m Earl Hickson Jr., a Front-End Developer and Graphic Designer based in Parsippany, New Jersey. With a strong foundation in HTML, CSS, JavaScript, and proficiency in tools like Adobe Creative Suite, I specialize in creating user-friendly and visually captivating websites.
               </p>
               <p>
-                For those unfamiliar, a kaiju is a giant monster often seen in
-                Japanese science fiction films. However, to me, a kaiju
-                represents more than just a creature that wreaks havoc. It
-                symbolizes a powerful force that has the potential for both
-                destruction and great good.
+              My journey into martial arts began in 2015 when I discovered Brazilian Jiu-Jitsu. This discipline not only enhanced my physical abilities but also instilled in me a profound sense of confidence, discipline, and community. The concept of the &apos;kaiju&apos;—a powerful force capable of both destruction and great good—resonates deeply with me. It symbolizes the inner strength and potential we all possess, which I&apos;ve learned to harness through Jiu-Jitsu.
               </p>
               <p>
-                My personal journey to Jiu-jitsu began in 2015 when I felt lost
-                and uncertain about my place in the world. As an only child
-                raised by independent women, I struggled with confidence and
-                self-esteem issues. While growing up, my love for martial arts
-                was evident, and Karate was the only sport I was allowed to
-                pursue. However, I longed for the connection and community that
-                martial arts provided, but it seemed like it wasn&apos;t in the cards
-                for me.
+              I hold a Bachelor of Arts in Graphic Design from Kean University and a Tech Degree in Front-End Web Development from Team Treehouse. These qualifications, combined with my dedication to continuous learning, enable me to deliver exceptional digital solutions.
               </p>
               <p>
-                That all changed when I discovered Jiu-jitsu. Through this art,
-                I was able to tap into my inner kaiju and embrace my strength
-                and power while also learning control and discipline. Jiu-jitsu
-                has been transformative for me, giving me the tools to become
-                the father and the man I never had in my life. I&apos;m forever
-                grateful for this art and the incredible community that
-                accompanies it.
+              When I&apos;m not coding or designing, you can find me on the Jiu-Jitsu mat, channeling my inner kaiju, or spending quality time with my family. I&apos;m passionate about creating digital experiences that not only look great but also provide meaningful user interactions.
               </p>
               <p>
-                In addition to my passion for Jiu-jitsu and my technical skills,
-                I bring a wealth of expertise in Front End Web Development and
-                Graphic Design. My proficiency in CMS, HTML, CSS, and Adobe
-                Creative Suite enables me to create user-friendly and visually
-                captivating websites.
+              If you&apos;re seeking a web developer who combines technical proficiency with a unique perspective and a commitment to excellence, let&apos;s connect and create something extraordinary together.
               </p>
-              <p>
-                I hold a Team Treehouse Tech Degree in Front End Web Development
-                and a Bachelor of Arts in Graphic Design from Kean University.
-                These qualifications, coupled with my dedication to continuous
-                learning, allow me to deliver exceptional results.
-              </p>
-              <p>
-                When I&apos;m not honing my craft, you can find me channeling my
-                inner kaiju on the Jiu-jitsu mat or working on projects that
-                excite me. I&apos;m passionate about creating visually stunning
-                websites that not only captivate users but also provide an
-                exceptional user experience.
-              </p>
-              <p>
-                If you&apos;re seeking a talented web engineer with a unique
-                perspective and a dedication to excellence, let&apos;s connect and
-                create something extraordinary together. Reach out to me, and
-                let&apos;s embark on this exciting journey!
-              </p>
+              
             </div>
           </div>
           <div className="lg:pl-20">
