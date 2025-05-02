@@ -71,7 +71,14 @@ const ArticleLayoutComponent = ({
 
             <h2 className="text-4xl font-semibold text-gray-100 leading-tight">{meta.title}</h2>
             <div className="flex mt-3">
-              <img src={authorImagePath} className="h-10 w-10 rounded-full object-cover" alt={authorName} />
+            <Image
+  src="/some/path.jpg"
+  alt="Blog post"
+  width={600} // replace with actual width
+  height={400} // replace with actual height
+  className="rounded-md"
+  priority // optional: for LCP optimization if image is above-the-fold
+/>
               <div className="ml-4 text-gray-200">
                 <p>Earl the Kaiju</p>
                 <time dateTime={meta.date}>{formatDate(meta.date)}</time>
