@@ -10,8 +10,8 @@ import logoNovocent from '@/images/logos/novocent_logo.png'
 import logoVerizon from '@/images/logos/verizonLogo.png'
 
 const siteMeta = {
-    title: "Earl The Kaiju",
-    description: "Earl Hickson Jr., also known as Earl the Kaiju, is a skilled graphic artist, proficient front-end developer, and passionate Jiu-Jitsu competitor and instructor.",
+    title: "Earl H.",
+    description: "Front-End Developer based in Parsippany, New Jersey. With a passion for creating intuitive and responsive web interfaces, Earl combines technical expertise with creative problem-solving to deliver impactful digital solutions.Earl Hickson Jr., also known as Earl the Kaiju, is a skilled graphic artist, proficient front-end developer, and passionate Jiu-Jitsu competitor and instructor.",
     copyright: "Earl Hickson Jr., CC-BY-SA",
     author: {
         name: "Earl Hickson Jr.",
@@ -22,7 +22,7 @@ const siteMeta = {
         linkedin: "https://www.linkedin.com/in/earl-hickson-jr/",
 
     },
-    siteUrl: "https://earl.dev"
+    siteUrl: "https://ehicksonjr.com"
 }
 export const resume = [
   {

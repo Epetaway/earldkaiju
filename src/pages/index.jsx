@@ -126,11 +126,11 @@ function Resume() {
         ))}
       </ol>
       <div className="relative z-10 mt-6 w-full flex justify-center ">
-        <div className="absolute inset-0 rounded-lg blur-md bg-blue-600 dark:bg-teal-900"></div>
+        <div className="absolute inset-0 rounded-lg blur-md "></div>
         <Button
           href="https://www.linkedin.com/in/earl-hickson-jr/"
-          variant="secondary"
-          className="relative z-20 group w-full bg-blue-600 dark:bg-teal-500"
+          variant="primary"
+          className="relative z-20 group w-full "
         >
           More on LinkedIn
         </Button>
@@ -143,11 +143,11 @@ export default function Home({ articles }) {
   return (
     <>
       <NextSeo
-        title="Earl The Kaiju"
+        title="Earl H."
         description={siteMeta.description}
-        canonical="https://Earl.dev/"
+        canonical="https://ehicksonjr.com/"
         openGraph={{
-          url: 'https://Earl.dev',
+          url: 'https://ehicksonjr.com',
           images: [
             {
               url: `https://og.Earl.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
@@ -157,7 +157,7 @@ export default function Home({ articles }) {
               type: 'image/jpeg',
             },
           ],
-          siteName: 'Earl.dev',
+          siteName: 'ehicksonjr',
         }}
       />
 

@@ -18,8 +18,7 @@ export function PortfolioCTA() {
           {/* Code block */}
           <div className="p-6 text-sm leading-relaxed">
             <pre className="whitespace-pre-wrap text-left">
-{`
-// Highlighting my work through code
+{`// Highlighting my work through code
   const portfolio = {
   name: "Earl Hickson Jr.",
   title: "Front-End Developer",
