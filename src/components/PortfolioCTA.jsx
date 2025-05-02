@@ -30,7 +30,7 @@ export function PortfolioCTA() {
     return `}
 <Link href="/projects">
   <span className="text-blue-600 dark:text-teal-400 hover:underline cursor-pointer">
-    viewPortfolio("/projects")
+    viewPortfolio(&quot;/projects&quot;)
   </span>
 </Link>
 {`;
