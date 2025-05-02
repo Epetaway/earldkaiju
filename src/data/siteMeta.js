@@ -24,8 +24,7 @@ const siteMeta = {
     },
     siteUrl: "https://earl.dev"
 }
- export const resume = [
-
+export const resume = [
   {
     company: 'Self-Employment',
     title: 'Freelance Developer & Designer',
@@ -36,52 +35,78 @@ const siteMeta = {
       dateTime: new Date().getFullYear(),
     },
   },
-    {
-      company: 'BroadcastMed',
-      title: 'Lead Graphic Designer',
-      logo: logoBroadcastMed,
-      start: '2021',
-      end: {
-        label: '2023',
-        // dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Prosek Partners',
-      title: 'Freelance Developer',
-      logo: logoProsek,
-      start: '2021',
-      end: '2021',
-    },
-    {
-      company: 'Merkle Inc',
-      title: 'Digital Messaging Analyst',
-      logo: logoMerkle,
-      start: '2018',
-      end: '2019',
-    },
-    {
-      company: 'MERCK',
-      title: 'Freelance Developer',
-      logo: logoMerck,
-      start: '2018',
-      end: '2018',
-    },
-    {
-      company: 'Novocent',
-      title: 'Front End Developer',
-      logo: logoNovocent,
-      start: '2017',
-      end: '2017',
-    },
-    {
-      company: 'Verizon Business',
-      title: 'Front End Developer',
-      logo: logoVerizon,
-      start: '2015',
-      end: '2016',
-    },
-  ]
+  {
+    company: 'Wealth Creation Innovation',
+    title: 'Senior Front-End Developer (Contract)',
+    logo: logoSelf,
+    start: 'Nov 2024',
+    end: 'Dec 2024',
+  },
+  {
+    company: 'Asembia',
+    title: 'Frontend Developer',
+    logo: logoSelf,
+    start: 'Dec 2023',
+    end: 'Nov 2024',
+  },
+  {
+    company: 'BroadcastMed',
+    title: 'Lead Designer and Developer',
+    logo: logoBroadcastMed,
+    start: 'Sep 2021',
+    end: 'May 2023',
+  },
+  {
+    company: 'Prosek Partners',
+    title: 'Freelance Front-End Web Developer',
+    logo: logoProsek,
+    start: 'Apr 2021',
+    end: 'Sep 2021',
+  },
+  {
+    company: 'William R Seide Agency',
+    title: 'Frontend Developer',
+    logo: logoSelf,
+    start: 'Jan 2020',
+    end: 'Jun 2020',
+  },
+  {
+    company: 'Merkle Inc',
+    title: 'Email Marketing Specialist',
+    logo: logoMerkle,
+    start: 'Nov 2018',
+    end: 'Jul 2019',
+  },
+  {
+    company: 'Merck',
+    title: 'Freelance Web Developer',
+    logo: logoMerck,
+    start: 'Apr 2018',
+    end: 'Nov 2018',
+  },
+  {
+    company: 'Novocent',
+    title: 'Frontend Web Developer',
+    logo: logoNovocent,
+    start: 'Mar 2017',
+    end: 'Jun 2017',
+  },
+  {
+    company: 'Verizon Wireless',
+    title: 'Front-End Developer',
+    logo: logoVerizon,
+    start: 'Sep 2015',
+    end: 'Dec 2016',
+  },
+  {
+    company: 'Second Melody',
+    title: 'Web Developer',
+    logo: logoSelf,
+    start: 'Jun 2015',
+    end: 'Sep 2015',
+  },
+]
+
 export const projects = [
 
   {

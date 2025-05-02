@@ -45,3 +45,37 @@ export function Twitter(props){
   )
 
 }
+export function YouTubeIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      fill="currentColor"
+      {...props}
+    >
+      <path d="M23.498 6.186a2.913 2.913 0 0 0-2.047-2.06C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.451.626A2.913 2.913 0 0 0 .502 6.186 30.3 30.3 0 0 0 0 12a30.3 30.3 0 0 0 .502 5.814 2.913 2.913 0 0 0 2.047 2.06C4.5 20.5 12 20.5 12 20.5s7.5 0 9.451-.626a2.913 2.913 0 0 0 2.047-2.06A30.3 30.3 0 0 0 24 12a30.3 30.3 0 0 0-.502-5.814ZM9.75 15.02V8.98l6 3.02-6 3.02Z" />
+    </svg>
+  )
+}
+export function MailIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
