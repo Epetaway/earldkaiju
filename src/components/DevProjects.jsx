@@ -15,14 +15,15 @@ function LinkIcon(props) {
 
 const recentProjectsCode = (
   <>
-    {`const recentProjects = [
+{`const recentProjects = [
 `}
     {projects.map((project) => (
       <div key={project.name}>
-        {`  {
-    name: "${project.name}",
-    description: "${project.description}",
-    link: `}
+{`{
+  name: "${project.name}",
+  description:"${project.description}",
+  `}
+  <span className="text-purple-400">link: </span>
         <Link href={project.link.href} className="text-blue-600 dark:text-teal-400 hover:underline cursor-pointer">
           <span>{project.link.label}</span>
         </Link>
@@ -52,7 +53,7 @@ export function DevProjects({ className = '' }) {
             <span className="ml-auto text-xs text-zinc-500 dark:text-zinc-400 italic">devProjects.js</span>
           </div>
           <div className="p-6 text-sm leading-relaxed overflow-x-auto">
-            <pre className="whitespace-pre-wrap text-left">
+            <pre className="whitespace-pre-wrap text-left text-orange-300">
               {recentProjectsCode}
             </pre>
           </div>

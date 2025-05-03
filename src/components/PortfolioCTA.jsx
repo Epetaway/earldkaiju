@@ -20,24 +20,21 @@ export function PortfolioCTA() {
             <pre className="whitespace-pre-wrap text-left">
             {
               `// Highlighting my work through code
-              const portfolio = {
-              name: "Earl Hickson Jr.",
-              title: "Front-End Developer",
-              focus: "Modern UI Development",
-              stack: ["Next.js", "Tailwind", "React"],
-              projects: () => {
-                // explore projects I've built
-                return 
-              `
-            }
-            <Link href="/projects">
-              <span className="text-blue-600 dark:text-teal-400 hover:underline cursor-pointer">
-                viewPortfolio(&quot;/projects&quot;)
-              </span>
-            </Link>
-            {`;
-              }
-            };`}
+const portfolio = {
+name: "Earl Hickson Jr.",
+title: "Front-End Developer",
+focus: "Modern UI Development",
+projects: () => {
+  stack: ["Next.js", "Tailwind", "React"],
+  // explore projects I've built
+  return `}
+<Link href="/projects">
+  <span className="text-blue-600 dark:text-teal-400 hover:underline cursor-pointer">
+      viewPortfolio(&quot;/projects&quot;)
+  </span>
+</Link> {`;
+}
+};`}
             </pre>
           </div>
         </div>

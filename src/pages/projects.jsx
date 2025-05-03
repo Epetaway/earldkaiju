@@ -19,8 +19,9 @@ function LinkIcon(props) {
 }
 
 export default function Projects() {
-  const headline = "Leaving My Digital Footprint: A Showcase of My Efforts to Impact the Universe through Design and Development.";
-  const intro = "Over time, I've embarked on numerous ventures, shaping and reshaping the digital landscape, but the ones showcased here truly capture my passion and creativity. If any of these creations stir your curiosity, delve deeper via the link provided. I welcome any and all input that could enhance these projects — after all, they are open source. Let's innovate together!";
+  const headline = "Selected Projects in Design and Development.";
+  const intro = "These projects highlight my work across design systems, front-end architecture, and user experience. Each one represents real problems solved with modern, maintainable code. Feedback and collaboration are always welcome.";
+  
 
   return (
     <>
