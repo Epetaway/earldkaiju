@@ -36,19 +36,19 @@ export default function About() {
       <NextSeo
         title="About - Earl The Kaiju"
         description={siteMeta.description}
-        canonical="https://earl.dev/about"
+        canonical="https://ehicksonjr.com/about"
         openGraph={{
-          url: 'https://earl.dev/about',
+          url: 'https://ehicksonjr.com/about',
           images: [
             {
-              url: `https://og.earl.dev/api/og?title=About&desc=${siteMeta.description}`,
+              url: `https://og.ehicksonjr.com/api/og?title=About&desc=${siteMeta.description}`,
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             },
           ],
-          siteName: 'earl.dev',
+          siteName: 'ehicksonjr.com',
         }}
       />
 

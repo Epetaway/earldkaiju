@@ -108,32 +108,49 @@ export const resume = [
 ]
 
 export const projects = [
-
+  {
+    name: 'MTG Proxy Generator',
+    description:
+      'A JavaScript-based tool for generating proxy cards for Magic: The Gathering. Demonstrates proficiency in DOM manipulation, dynamic content rendering, and user customization through interactive forms.',
+    link: { href: 'https://github.com/Epetaway/mtg-proxy-generator', label: 'JavaScript' },
+  },
+  {
+    name: 'Todolist',
+    description:
+      'A simple and elegant to-do list application built with React. Showcases component-driven architecture, state management with hooks, and clean UI implementation.',
+    link: { href: 'https://github.com/Epetaway/Todolist', label: 'React, JavaScript' },
+  },
+  {
+    name: 'GitHub Portfolio Website',
+    description:
+      "A fully responsive, developer-focused portfolio site built with Next.js 14, Tailwind CSS, and dynamic metadata for SEO. Features include a light/dark mode toggle, project filtering, OG image generation, custom components, and modular content structure. Built to showcase modern front-end skills, reusable design systems, and personal branding.",
+    link: { href: 'https://github.com/epetaway/earldkaiju', label: 'Next.js, Tailwind CSS' },
+  },
   {
     name: 'Employee Directory',
     description:
       "In this project, I'm leveraging JavaScript to build an interactive employee directory by integrating data from third-party APIs such as Twitter, Facebook, IMDB, and Wikipedia. It's a dynamic exploration of effective data communication, all wrapped up in a user-friendly web interface.",
-    link: { href: 'https://epetaway.github.io/Employee-Directory/', label: 'directory.dev' },
-    // logo: logoFleek,
+    link: { href: 'https://epetaway.github.io/Employee-Directory/', label: 'JavaScript, HTML, CSS' },
   },
   {
-    name: 'Movie Rating app',
+    name: 'Movie Rating App',
     description:
-      'A small web-app that just allows the user to rate the latest Marvel movies, using Javascript.',
-    link: { href: 'https://epetaway.github.io/marvel-movie-app/', label: 'rating.dev' },
-    // logo: logoVanilla,
+      'A small web app that allows the user to rate the latest Marvel movies using vanilla JavaScript. Highlights DOM handling, form inputs, and user interaction.',
+    link: { href: 'https://epetaway.github.io/marvel-movie-app/', label: 'JavaScript, HTML, CSS' },
   },
   {
     name: 'Game Show App',
     description:
-      "In this project, you'll create a browser version of 'Wheel of Success', a word guessing game. You’ll use Javascript to come up with a random phrase that players will try to guess by entering different letters into the program.",
-    link: { href: 'https://epetaway.github.io/WHEEL-OF-SUCCESS/', label: 'game-app.dev' },
-    // logo: logoCaptainhook,
+      "A browser version of 'Wheel of Success', a word guessing game. Built in vanilla JavaScript to demonstrate logic flow, event listeners, and dynamic UI rendering.",
+    link: { href: 'https://epetaway.github.io/WHEEL-OF-SUCCESS/', label: 'JavaScript, HTML, CSS' },
   },
+];
 
 
 
-]
+
+
+
 
 
 export default siteMeta;

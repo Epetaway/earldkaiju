@@ -43,19 +43,19 @@ export default function ArticlesIndex({ articles }) {
     <NextSeo
       title="Ultra-Jitsu - Earl the Kaiju"
       description={siteMeta.description}
-      canonical="https://earl.dev/ultrajitsu"
+      canonical="https://ehicksonjr.com/ultrajitsu"
       openGraph={{
-        url: 'https://earl.dev/ultrajitsu',
+        url: 'https://ehicksonjr.com/ultrajitsu',
         images: [
           {
-            url: `https://og.earl.dev/api/og?title=Ultra-Jitsu&desc=${headline}`,
+            url: `https://og.ehicksonjr.com/api/og?title=Ultra-Jitsu&desc=${headline}`,
             width: 1200,
             height: 600,
             alt: 'Og Image Alt',
             type: 'image/jpeg',
           }
         ],
-        siteName: 'earl.dev',
+        siteName: 'ehicksonjr.com',
       }}
     />
       <SimpleLayout

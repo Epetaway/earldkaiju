@@ -150,7 +150,7 @@ export default function Home({ articles }) {
           url: 'https://ehicksonjr.com',
           images: [
             {
-              url: `https://og.Earl.dev/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+              url: `https://og.ehicksonjr.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',

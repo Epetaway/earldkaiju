@@ -44,19 +44,19 @@ const ArticleLayoutComponent = ({
       <NextSeo
         title={meta.title}
         description={meta.description}
-        canonical={`https://earl.dev${router.asPath}`}
+        canonical={`https://ehicksonjr.com${router.asPath}`}
         openGraph={{
-          url: `https://earl.dev${router.asPath}`,
+          url: `https://ehicksonjr.com${router.asPath}`,
           images: [
             {
-              url: `https://og.earl.dev/api/og?title=${meta.title}&desc=${meta.description}`,
+              url: `https://og.ehicksonjr.com/api/og?title=${meta.title}&desc=${meta.description}`,
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             }
           ],
-          siteName: 'earl.dev',
+          siteName: 'ehicksonjr.com',
         }}
       />
 
