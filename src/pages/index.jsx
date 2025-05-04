@@ -52,7 +52,7 @@ function LetsConnect() {
       action="mailto:e@ehicksonjr.com"
       method="POST"
       encType="text/plain"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 w-full"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
@@ -86,8 +86,7 @@ function LetsConnect() {
 
 function Resume() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 overflow-y-hidden
-    ">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 overflow-y-hidden w-full">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <span className="ml-3">Work</span>
       </h2>
@@ -216,16 +215,17 @@ export default function Home({ articles }) {
         <JiuJitsuCTA />
       </Container> */}
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <LetsConnect />
-            <Resume />
-          </div>
+        <div className="mx-auto max-w-5xl grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-8">
+          <Resume />
+          <LetsConnect />
+        </div>
+      </Container>
+      <Container className="mt-24 md:mt-28">
+        <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-8">Latest Writings</h2>
+        <div className="mx-auto flex flex-col gap-16">
+          {articles.map((article) => (
+            <Article key={article.slug} article={article} />
+          ))}
         </div>
       </Container>
     </>
