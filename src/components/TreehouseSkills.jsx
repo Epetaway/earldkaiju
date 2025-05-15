@@ -7,7 +7,7 @@ export default function TreehouseSkills({ initialSkills = [] }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (skills.length === 0) {
+    if (!initialSkills.length) { // Only fetch if initialSkills are empty
       setLoading(true);
       async function fetchTreehouseData() {
         try {
@@ -27,7 +27,7 @@ export default function TreehouseSkills({ initialSkills = [] }) {
 
       fetchTreehouseData();
     }
-  }, []);
+  }, [initialSkills]);
 
   if (loading) return <div className="text-center text-sm text-zinc-500">Loading skills...</div>;
   if (error) return <div className="text-center text-sm text-red-500">Error loading skills: {error}</div>;
