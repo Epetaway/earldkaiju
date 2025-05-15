@@ -12,8 +12,44 @@ import {
   MailIcon,
   YouTubeIcon,
 } from '@/components/SocialIcons'
-import TreehouseSkills from '@/components/TreehouseSkills';
+
 import image3 from '@/images/photos/me.jpeg'
+import TreehouseSkills from '@/components/TreehouseSkills';
+
+export async function getStaticProps() {
+  try {
+    const username = process.env.NEXT_PUBLIC_TREEHOUSE_USERNAME;
+    const response = await fetch(`https://teamtreehouse.com/${username}.json`);
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch skills during build');
+    }
+
+    const data = await response.json();
+    return {
+      props: {
+        initialSkills: data.badges || [],
+      },
+      revalidate: 3600, // Regenerate every hour (optional)
+    };
+  } catch (error) {
+    console.error('Error fetching skills during build:', error);
+    return {
+      props: {
+        initialSkills: [],
+      },
+    };
+  }
+}
+
+export default function Home({ initialSkills }) {
+  return (
+    <div className="container mx-auto px-4">
+      <h1 className="text-4xl font-bold mb-6">My Skills</h1>
+      <TreehouseSkills initialSkills={initialSkills} />
+    </div>
+  );
+}
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
