@@ -1,6 +1,6 @@
-// src/pages/index.jsx
 import Image from 'next/image'
 import Link from 'next/link'
+import clsx from 'clsx'
 import { PortfolioCTA } from '@/components/PortfolioCTA'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -10,14 +10,17 @@ import {
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
+  YouTubeIcon,
 } from '@/components/SocialIcons'
-import TreehouseSkills from '@/components/TreehouseSkills'
+import TreehouseSkills from '@/components/TreehouseSkills';
+import image3 from '@/images/photos/me.jpeg'
+
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 import siteMeta, { resume } from '@/data/siteMeta'
 import { NextSeo } from 'next-seo'
-import image3 from '@/images/photos/me.jpeg'
+import { JiuJitsuCTA } from '@/components/JiuJitsuCTA'
 
 function Article({ article }) {
   return (
@@ -34,27 +37,115 @@ function Article({ article }) {
   )
 }
 
-export default function Home({ articles, initialSkills }) {
+function SocialLink({ icon: Icon, ...props }) {
+  return (
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    </Link>
+  )
+}
+
+function LetsConnect() {
+  return (
+    <form
+      action="mailto:e@ehicksonjr.com"
+      method="POST"
+      encType="text/plain"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 w-full"
+    >
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <MailIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Let’s Connect</span>
+      </h2>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        Whether you have a project, a question, or just want to say hello, I’d love to hear from you.
+      </p>
+      <div className="mt-6 flex flex-col gap-4">
+        <input
+          type="text"
+          name="email"
+          placeholder="Your email"
+          aria-label="Your email"
+          required
+          className="w-full rounded-md border bg-white px-3 py-2 shadow-md placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none dark:bg-zinc-700 dark:text-zinc-200 sm:text-sm"
+        />
+        <textarea
+          name="message"
+          placeholder="Your message"
+          rows="4"
+          className="w-full rounded-md border bg-white px-3 py-2 shadow-md placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none dark:bg-zinc-700 dark:text-zinc-200 sm:text-sm"
+        />
+        <Button type="submit" className="self-start">Send Message</Button>
+      </div>
+    </form>
+  )
+}
+
+function Resume() {
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 overflow-y-hidden w-full">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <span className="ml-3">Work</span>
+      </h2>
+      <ol className="mt-6 space-y-4 max-h-80 overflow-hidden">
+        {resume.map((role, roleIndex) => (
+          <li key={roleIndex} className="flex gap-4">
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 ring-zinc-900/5 dark:border dark:bg-zinc-800">
+              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+            </div>
+            <dl className="flex flex-auto flex-wrap gap-x-2">
+              <dt className="sr-only">Company</dt>
+              <dd className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                {role.company}
+              </dd>
+              <dt className="sr-only">Role</dt>
+              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+                {role.title}
+              </dd>
+            </dl>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+export default function Home({ articles }) {
   return (
     <>
       <NextSeo
         title="Earl H."
         description={siteMeta.description}
         canonical="https://ehicksonjr.com/"
+        openGraph={{
+          url: 'https://ehicksonjr.com',
+          images: [
+            {
+              url: `https://og.ehicksonjr.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+              width: 1200,
+              height: 600,
+              alt: 'Og Image Alt',
+            },
+          ],
+          siteName: 'ehicksonjr',
+        }}
       />
 
       <Container className="mt-16 sm:mt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <Image src={image3} alt="Earl Hickson Jr." width={300} height={300} className="rounded-2xl" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="lg:pr-10">
+            <Image src={image3} alt="Earl Hickson Jr." className="rounded-2xl" />
           </div>
           <div>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Crafting Engaging Digital Experiences
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight">Crafting Engaging Digital Experiences</h1>
             <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-              Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer. Explore his work and skills.
+              Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey.
             </p>
+            <div className="mt-6 flex gap-6">
+              <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} />
+              <SocialLink href="https://github.com" icon={GitHubIcon} />
+              <SocialLink href={siteMeta.author.linkedin} icon={LinkedInIcon} />
+            </div>
           </div>
         </div>
       </Container>
@@ -63,15 +154,18 @@ export default function Home({ articles, initialSkills }) {
         <PortfolioCTA />
       </Container>
 
+      <Container className="mt-24 md:mt-28 grid grid-cols-1 gap-y-20 lg:grid-cols-2">
+        <Resume />
+        <TreehouseSkills />
+        <LetsConnect />
+      </Container>
+
       <Container className="mt-24 md:mt-28">
-        <div className="grid gap-12 lg:grid-cols-2">
-          <TreehouseSkills initialSkills={initialSkills} />
-          <div>
-            <h2 className="text-2xl font-semibold">Latest Writings</h2>
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
+        <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-8">Latest Writings</h2>
+        <div className="flex flex-col gap-16">
+          {articles.map((article) => (
+            <Article key={article.slug} article={article} />
+          ))}
         </div>
       </Container>
     </>
@@ -83,15 +177,11 @@ export async function getStaticProps() {
     await generateRssFeed()
   }
 
-  const articles = (await getAllArticles())
-    .slice(0, 4)
-    .map(({ component, ...meta }) => meta);
+  const articles = (await getAllArticles()).slice(0, 4).filter(article => article.date);
 
   return {
     props: {
       articles,
-      initialSkills: [],
     },
-  
   }
 }
