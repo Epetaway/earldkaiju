@@ -45,3 +45,10 @@ next.config.js
 .next/cache/webpack/server-development/index.pack
 .next/cache/webpack/server-development/index.pack.old
 src/images/.DS_Store
+.next/trace
+.next/cache/webpack/client-development/index.pack
+.next/cache/webpack/client-development/index.pack.old
+.next/cache/webpack/server-development/0.pack
+.next/cache/webpack/server-development/index.pack
+.next/cache/webpack/server-development/index.pack.old
+.next/server/pages-manifest.json
