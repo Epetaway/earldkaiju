@@ -10,13 +10,17 @@ import {
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
+  YouTubeIcon,
 } from '@/components/SocialIcons';
+
 import image3 from '@/images/photos/me.jpeg';
 import TreehouseSkills from '@/components/TreehouseSkills';
+import Resume from '@/components/Resume';
+import LetsConnect from '@/components/LetsConnect';
 import { generateRssFeed } from '@/lib/generateRssFeed';
 import { getAllArticles } from '@/lib/getAllArticles';
 import { formatDate } from '@/lib/formatDate';
-import siteMeta, { resume } from '@/data/siteMeta';
+import siteMeta from '@/data/siteMeta';
 import { NextSeo } from 'next-seo';
 
 function Article({ article }) {
@@ -34,56 +38,7 @@ function Article({ article }) {
   );
 }
 
-function SocialLink({ icon: Icon, ...props }) {
-  return (
-    <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
-  );
-}
-
-function LetsConnect() {
-  return (
-    <form
-      action="mailto:e@ehicksonjr.com"
-      method="POST"
-      encType="text/plain"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 w-full"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Let’s Connect</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Whether you have a project, a question, or just want to say hello, I’d love to hear from you.
-      </p>
-      <Button type="submit" className="mt-4">Send Message</Button>
-    </form>
-  );
-}
-
-function Resume() {
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        Work Experience
-      </h2>
-      <ul className="mt-4 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
-        {resume.map((role, index) => (
-          <li key={index} className="flex flex-col">
-            <span className="font-medium text-zinc-900 dark:text-zinc-100">{role.company}</span>
-            <span>{role.title}</span>
-            <span className="text-xs text-zinc-500 dark:text-zinc-400">
-              {role.start.label} - {role.end.label}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default function Home({ articles, initialSkills }) {
+export default function Home({ articles }) {
   return (
     <>
       <NextSeo
@@ -108,40 +63,58 @@ export default function Home({ articles, initialSkills }) {
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
-            <Image
-              src={image3}
-              alt="Earl Hickson Jr."
-              sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-            />
+            <div className="max-w-xs px-2.5 lg:max-w-none">
+              <Image
+                src={image3}
+                alt="Earl Hickson Jr."
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              />
+            </div>
           </div>
+
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Crafting Engaging Digital Experiences
             </h1>
-            <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-              Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer with a passion for building intuitive web interfaces.
-            </p>
+            <div className="prose mt-6 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400 space-y-5">
+              <p>
+                Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey. With a passion for creating intuitive and responsive web interfaces, Earl combines technical expertise with creative problem-solving to deliver impactful digital solutions.
+              </p>
+              <p>
+                Explore his work to see how he brings ideas to life through clean code and user-centric design.
+              </p>
+            </div>
             <div className="mt-6 flex gap-6">
-              <SocialLink href={siteMeta.author.instagram} aria-label="Instagram" icon={InstagramIcon} />
-              <SocialLink href="https://github.com" aria-label="GitHub" icon={GitHubIcon} />
-              <SocialLink href={siteMeta.author.linkedin} aria-label="LinkedIn" icon={LinkedInIcon} />
+              <Link href={siteMeta.author.instagram} aria-label="Follow on Instagram">
+                <InstagramIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+              </Link>
+              <Link href="https://github.com" aria-label="Follow on GitHub">
+                <GitHubIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+              </Link>
+              <Link href={siteMeta.author.linkedin} aria-label="Follow on LinkedIn">
+                <LinkedInIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+              </Link>
             </div>
           </div>
         </div>
       </Container>
 
       <Container className="mt-24 md:mt-28">
-        <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-3">
+        <PortfolioCTA />
+      </Container>
+
+      <Container className="mt-24 md:mt-28">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8">
           <Resume />
-          <TreehouseSkills initialSkills={initialSkills} />
+          <TreehouseSkills />
           <LetsConnect />
         </div>
       </Container>
 
       <Container className="mt-24 md:mt-28">
         <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-8">Latest Writings</h2>
-        <div className="grid gap-8">
+        <div className="mx-auto flex flex-col gap-16">
           {articles.map((article) => (
             <Article key={article.slug} article={article} />
           ))}
@@ -153,13 +126,14 @@ export default function Home({ articles, initialSkills }) {
 
 export async function getStaticProps() {
   if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed(); // Only on the server side
+    await generateRssFeed();
   }
 
-  const articles = await getAllArticles();
   return {
     props: {
-      articles: articles.slice(0, 4).map(({ component, ...meta }) => meta),
+      articles: (await getAllArticles())
+        .slice(0, 4)
+        .map(({ component, ...meta }) => meta),
     },
   };
 }
