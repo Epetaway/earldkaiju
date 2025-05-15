@@ -1,3 +1,4 @@
+// src/pages/index.jsx
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -10,11 +11,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
-  YouTubeIcon,
 } from '@/components/SocialIcons'
-import TreehouseSkills from '@/components/TreehouseSkills';
 import image3 from '@/images/photos/me.jpeg'
-
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -67,13 +65,13 @@ function LetsConnect() {
           placeholder="Your email"
           aria-label="Your email"
           required
-          className="w-full rounded-md border bg-white px-3 py-2 shadow-md placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none dark:bg-zinc-700 dark:text-zinc-200 sm:text-sm"
+          className="w-full rounded-md border border-zinc-900/10 bg-white px-3 py-2 shadow-md placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none dark:bg-zinc-700/[0.15] dark:text-zinc-200"
         />
         <textarea
           name="message"
           placeholder="Your message"
           rows="4"
-          className="w-full rounded-md border bg-white px-3 py-2 shadow-md placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none dark:bg-zinc-700 dark:text-zinc-200 sm:text-sm"
+          className="w-full rounded-md border bg-white px-3 py-2 shadow-md placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none dark:bg-zinc-700/[0.15] dark:text-zinc-200"
         />
         <Button type="submit" className="self-start">Send Message</Button>
       </div>
@@ -83,19 +81,19 @@ function LetsConnect() {
 
 function Resume() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 overflow-y-hidden w-full">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 w-full overflow-y-hidden">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <span className="ml-3">Work</span>
       </h2>
-      <ol className="mt-6 space-y-4 max-h-80 overflow-hidden">
+      <ol className="mt-6 space-y-4 max-h-80 overflow-y-auto">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 ring-zinc-900/5 dark:border dark:bg-zinc-800">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+            <div className="relative mt-1 flex h-10 w-10 items-center justify-center rounded-full shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800">
+              <Image src={role.logo} alt={role.company} className="h-7 w-7" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
-              <dd className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
@@ -137,15 +135,10 @@ export default function Home({ articles }) {
             <Image src={image3} alt="Earl Hickson Jr." className="rounded-2xl" />
           </div>
           <div>
-            <h1 className="text-4xl font-bold tracking-tight">Crafting Engaging Digital Experiences</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Crafting Engaging Digital Experiences</h1>
             <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
               Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey.
             </p>
-            <div className="mt-6 flex gap-6">
-              <SocialLink href={siteMeta.author.instagram} icon={InstagramIcon} />
-              <SocialLink href="https://github.com" icon={GitHubIcon} />
-              <SocialLink href={siteMeta.author.linkedin} icon={LinkedInIcon} />
-            </div>
           </div>
         </div>
       </Container>
@@ -154,9 +147,8 @@ export default function Home({ articles }) {
         <PortfolioCTA />
       </Container>
 
-      <Container className="mt-24 md:mt-28 grid grid-cols-1 gap-y-20 lg:grid-cols-2">
+      <Container className="mt-24 md:mt-28 grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-8">
         <Resume />
-        <TreehouseSkills />
         <LetsConnect />
       </Container>
 
@@ -177,11 +169,9 @@ export async function getStaticProps() {
     await generateRssFeed()
   }
 
-  const articles = (await getAllArticles()).slice(0, 4).filter(article => article.date);
-
   return {
     props: {
-      articles,
+      articles: (await getAllArticles()).slice(0, 4).filter((article) => article.date),
     },
   }
 }
