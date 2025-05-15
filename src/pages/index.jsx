@@ -152,6 +152,10 @@ export default function Home({ articles, initialSkills }) {
 }
 
 export async function getStaticProps() {
+  if (process.env.NODE_ENV === 'production') {
+    await generateRssFeed(); // Only on the server side
+  }
+
   const articles = await getAllArticles();
   return {
     props: {
