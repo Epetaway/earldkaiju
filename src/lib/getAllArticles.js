@@ -1,29 +1,23 @@
-// src/lib/getAllArticles.js
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import glob from 'fast-glob'
+import * as path from 'path'
 
-// Define the articles directory
-const articlesDirectory = path.join(process.cwd(), 'src/pages/articles');
+async function importArticle(articleFilename) {
+  let { meta, default: component } = await import(
+    `../pages/articles/${articleFilename}`
+  )
+  return {
+    slug: articleFilename.replace(/(\/index)?\.mdx$/, ''),
+    ...meta,
+    component,
+  }
+}
 
 export async function getAllArticles() {
-  const articleFilenames = fs.readdirSync(articlesDirectory).filter((file) =>
-    file.endsWith('.mdx') || fs.existsSync(path.join(articlesDirectory, file, 'index.mdx'))
-  );
+  let articleFilenames = await glob(['*.mdx', '*/index.mdx'], {
+    cwd: path.join(process.cwd(), 'src/pages/articles'),
+  })
 
-  const articles = articleFilenames.map((filename) => {
-    const filePath = filename.endsWith('.mdx')
-      ? path.join(articlesDirectory, filename)
-      : path.join(articlesDirectory, filename, 'index.mdx');
-    const fileContents = fs.readFileSync(filePath, 'utf-8');
-    const { data } = matter(fileContents);
-    
-    return {
-      ...data,
-      slug: filename.replace(/(\/index)?\.mdx$/, ''),
-    };
-  });
+  let articles = await Promise.all(articleFilenames.map(importArticle))
 
-  // Sort articles by date (most recent first)
-  return articles.sort((a, z) => new Date(z.date) - new Date(a.date));
+  return articles.sort((a, z) => new Date(z.date) - new Date(a.date))
 }
