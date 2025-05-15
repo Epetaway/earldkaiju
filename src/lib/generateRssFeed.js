@@ -1,4 +1,3 @@
-// src/lib/generateRssFeed.js
 import ReactDOMServer from 'react-dom/server';
 import { Feed } from 'feed';
 import fs from 'fs';
@@ -30,20 +29,26 @@ export async function generateRssFeed() {
 
   for (const article of articles) {
     const url = `${siteUrl}/articles/${article.slug}`;
-    const html = ReactDOMServer.renderToStaticMarkup(
-      <article.component isRssFeed />
-    );
 
-    feed.addItem({
-      title: article.title,
-      id: url,
-      link: url,
-      description: article.description,
-      content: html,
-      author: [author],
-      contributor: [author],
-      date: new Date(article.date),
-    });
+    // Ensure component is valid before rendering
+    if (article.component) {
+      const html = ReactDOMServer.renderToStaticMarkup(
+        <article.component isRssFeed />
+      );
+
+      feed.addItem({
+        title: article.title,
+        id: url,
+        link: url,
+        description: article.description,
+        content: html,
+        author: [author],
+        contributor: [author],
+        date: new Date(article.date),
+      });
+    } else {
+      console.warn(`Skipping RSS generation for ${article.slug} - Component is missing.`);
+    }
   }
 
   const rssDirectory = path.join(process.cwd(), 'public/rss');
