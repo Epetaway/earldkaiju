@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { PortfolioCTA } from '@/components/PortfolioCTA'
+
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
@@ -11,6 +12,7 @@ import {
   LinkedInIcon,
   MailIcon,
 } from '@/components/SocialIcons'
+
 import image3 from '@/images/photos/me.jpeg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -84,7 +86,7 @@ function Resume() {
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <span className="ml-3">Work</span>
       </h2>
-      <ol className="mt-6 space-y-4 max-h-80 overflow-y-auto">
+      <ol className="mt-6 space-y-4  max-h-80">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 items-center justify-center rounded-full shadow-md ring-1 ring-zinc-900/5 dark:bg-zinc-800">
