@@ -5,8 +5,8 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { Container } from '@/components/Container';
 import TreehouseSkills from '@/components/TreehouseSkills';
-import Resume from '.../components/Resume';
-import LetsConnect from '.../components/LetsConnect';
+import Resume from '../components/Resume';
+import LetsConnect from '../components/LetsConnect';
 
 import image3 from '@/images/photos/me.jpeg';
 import { generateRssFeed } from '@/lib/generateRssFeed';
