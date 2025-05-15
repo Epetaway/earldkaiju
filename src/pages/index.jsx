@@ -92,6 +92,6 @@ export async function getStaticProps() {
       articles,
       initialSkills: [],
     },
-    revalidate: 3600, // Regenerate every hour
+  
   }
 }
