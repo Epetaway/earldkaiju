@@ -123,38 +123,76 @@ export default function Home({ articles }) {
               width: 1200,
               height: 600,
               alt: 'Og Image Alt',
+              type: 'image/jpeg',
             },
           ],
           siteName: 'ehicksonjr',
         }}
       />
 
+      {/* Intro Section - Two Column Layout */}
       <Container className="mt-16 sm:mt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="lg:pr-10">
-            <Image src={image3} alt="Earl Hickson Jr." className="rounded-2xl" />
+        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+          {/* Left Image */}
+          <div className="lg:pl-20">
+            <div className="max-w-xs px-2.5 lg:max-w-none">
+              <Image
+                src={image3}
+                alt="Earl Hickson Jr."
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              />
+            </div>
           </div>
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Crafting Engaging Digital Experiences</h1>
-            <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-              Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey.
-            </p>
+
+          {/* Right Content */}
+          <div className="lg:order-first lg:row-span-2">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              Crafting Engaging Digital Experiences
+            </h1>
+            <div className="prose mt-6 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400 space-y-5">
+              <p>
+                Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey. With a passion for creating intuitive and responsive web interfaces, Earl combines technical expertise with creative problem-solving to deliver impactful digital solutions.
+              </p>
+              <p>
+                Explore his work to see how he brings ideas to life through clean code and user-centric design.
+              </p>
+            </div>
+            <div className="mt-6 flex gap-6">
+              <SocialLink
+                href={siteMeta.author.instagram}
+                aria-label="Follow on Instagram"
+                icon={InstagramIcon}
+              />
+              <SocialLink
+                href="https://github.com"
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+              <SocialLink
+                href={siteMeta.author.linkedin}
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+            </div>
           </div>
         </div>
       </Container>
-
       <Container className="mt-24 md:mt-28">
         <PortfolioCTA />
       </Container>
-
-      <Container className="mt-24 md:mt-28 grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-8">
-        <Resume />
-        <LetsConnect />
+      {/* <Container className="mt-24 md:mt-28">
+        <JiuJitsuCTA />
+      </Container> */}
+      <Container className="mt-24 md:mt-28">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-8">
+          <Resume />
+          <LetsConnect />
+        </div>
       </Container>
-
       <Container className="mt-24 md:mt-28">
         <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-8">Latest Writings</h2>
-        <div className="flex flex-col gap-16">
+        <div className="mx-auto flex flex-col gap-16">
           {articles.map((article) => (
             <Article key={article.slug} article={article} />
           ))}
@@ -163,7 +201,6 @@ export default function Home({ articles }) {
     </>
   )
 }
-
 export async function getStaticProps() {
   if (process.env.NODE_ENV === 'production') {
     await generateRssFeed()
