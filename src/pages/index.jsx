@@ -1,4 +1,3 @@
-// src/pages/index.jsx
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -203,12 +202,14 @@ export default function Home({ articles }) {
 }
 export async function getStaticProps() {
   if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
+    await generateRssFeed();
   }
+
+  const articles = await getAllArticles();
 
   return {
     props: {
-      articles: (await getAllArticles()).slice(0, 4).filter((article) => article.date),
+      articles: articles.slice(0, 4), // Only JSON-serializable data
     },
-  }
+  };
 }
