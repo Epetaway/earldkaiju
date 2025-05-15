@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { PortfolioCTA } from '@/components/PortfolioCTA'
-
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
@@ -13,7 +12,7 @@ import {
   MailIcon,
   YouTubeIcon,
 } from '@/components/SocialIcons'
-
+import TreehouseSkills from '@/components/TreehouseSkills';
 import image3 from '@/images/photos/me.jpeg'
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -83,14 +82,28 @@ function LetsConnect() {
     </form>
   )
 }
-
+function Certifications() {
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <span className="ml-3">Certifications & Education</span>
+      </h2>
+      <ul className="mt-4 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+        <li>IBM Full Stack Software Developer - Coursera (In Progress)</li>
+        <li>Full Stack JavaScript Techdegree - Treehouse (In Progress)</li>
+        <li>HTML, CSS, JavaScript - FreeCodeCamp (Completed)</li>
+        <li>Responsive Web Design - FreeCodeCamp (Completed)</li>
+      </ul>
+    </div>
+  );
+}
 function Resume() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 overflow-y-hidden w-full">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <span className="ml-3">Work</span>
       </h2>
-      <ol className="mt-6 space-y-4  max-h-80">
+      <ol className="mt-6 space-y-4  max-h-80 overflow-hidden">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -217,6 +230,7 @@ export default function Home({ articles }) {
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto max-w-5xl grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-8">
           <Resume />
+          <TreehouseSkills/>
           <LetsConnect />
         </div>
       </Container>
