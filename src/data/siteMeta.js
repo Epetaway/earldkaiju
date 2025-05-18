@@ -12,7 +12,7 @@ import logoVerizon from '@/images/logos/verizonLogo.png'
 const siteMeta = {
     title: "Earl H.",
     description: "Front-End Developer based in Parsippany, New Jersey. With a passion for creating intuitive and responsive web interfaces, Earl combines technical expertise with creative problem-solving to deliver impactful digital solutions.Earl Hickson Jr., also known as Earl the Kaiju, is a skilled graphic artist, proficient front-end developer, and passionate Jiu-Jitsu competitor and instructor.",
-    copyright: "Earl Hickson Jr., CC-BY-SA",
+    copyright: "Earl Hickson Jr., ",
     author: {
         name: "Earl Hickson Jr.",
         email: "earlhicksonjr@gmail.com",
@@ -29,7 +29,7 @@ export const resume = [
     company: 'Self-Employment',
     title: 'Freelance Developer & Designer',
     logo: logoSelf,
-    start: '2019',
+    start: '2024',
     end: {
       label: 'Present',
       dateTime: new Date().getFullYear(),
