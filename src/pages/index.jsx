@@ -161,28 +161,29 @@ export default function Home({ articles }) {
       />
 
       <Container className="mt-16 sm:mt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="lg:pr-10">
-            <Image src={image3} alt="Earl Hickson Jr." className="rounded-2xl" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Crafting Engaging Digital Experiences</h1>
-            <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-              Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey.
-            </p>
+      <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <div className="lg:pl-20">
+          <Image src={image3} alt="Earl Hickson Jr." sizes="(min-width: 1024px) 32rem, 20rem" className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800" />
+        </div>
+
+        <div className="lg:order-first lg:row-span-2">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">Crafting Engaging Digital Experiences</h1>
+          <div className="prose mt-6 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400 space-y-5">
+            <p>Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey. I specialize in crafting user-friendly, responsive web experiences through clean code and innovative designs.</p>
+            <p>Explore my work, learn about my journey, and discover how I bring ideas to life with a blend of creativity and technical skill.</p>
           </div>
         </div>
-      </Container>
+      </div>
 
-      <Container className="mt-24 md:mt-28">
-        <PortfolioCTA />
-      </Container>
+      
+    </Container>
       {/* <Container className="mt-24 md:mt-28">
         <JiuJitsuCTA />
       </Container> */}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto max-w-5xl grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-x-8">
           <Resume />
+          <TreehouseSkills/>
           <LetsConnect />
         </div>
       </Container>
