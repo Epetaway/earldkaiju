@@ -53,3 +53,16 @@ src/images/.DS_Store
 .next/cache/webpack/server-development/index.pack.old
 .next/server/pages-manifest.json
 .next/cache/webpack/client-development/index.pack.old
+.next/build-manifest.json
+.next/trace
+.next/cache/webpack/client-development/0.pack
+.next/cache/webpack/client-development/1.pack
+.next/cache/webpack/client-development/index.pack
+.next/cache/webpack/client-development/index.pack.old
+.next/cache/webpack/server-development/0.pack
+.next/cache/webpack/server-development/1.pack
+.next/cache/webpack/server-development/index.pack
+.next/cache/webpack/server-development/index.pack.old
+.next/server/middleware-build-manifest.js
+.next/server/pages-manifest.json
+.next/server/webpack-runtime.js
