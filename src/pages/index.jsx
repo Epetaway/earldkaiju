@@ -87,7 +87,7 @@ export default function Home({ articles = [] }) {
       </Container>
 
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mx-auto max-w-5xl overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-6">
           <TreehouseSkills />
           <Resume />
           <LetsConnect />

@@ -40,7 +40,7 @@ export default function TreehouseSkills() {
         <FaCode className="mr-2 text-teal-500" />
         Coding Skills
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="grid max-h-[400px] overflow-y-auto grid-cols-2 sm:grid-cols-3 gap-4">
         {skills.map((badge, index) => (
           <div 
             key={index} 
