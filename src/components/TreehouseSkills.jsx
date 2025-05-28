@@ -40,12 +40,12 @@ export default function TreehouseSkills() {
         <FaCode className="mr-2 text-teal-500" />
         Coding Skills
       </h2>
-      <div className="grid max-h-[400px] overflow-y-auto grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="grid max-h-[400px] w-fit overflow-y-auto grid-cols-4 gap-3 md:grid-cols-3 md:gap-4">
         {skills.map((badge, index) => (
           <div 
             key={index} 
             onClick={() => setSelectedBadge(badge)}
-            className="cursor-pointer transition-transform transform hover:scale-105 bg-zinc-100 dark:bg-zinc-800 rounded-lg p-2 shadow"
+            className="w-fit cursor-pointer transition-transform transform hover:scale-105 bg-zinc-100 dark:bg-zinc-800 rounded-lg p-2 shadow"
           >
             <Image 
               src={badge.icon_url} 

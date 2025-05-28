@@ -66,3 +66,4 @@ src/images/.DS_Store
 .next/server/middleware-build-manifest.js
 .next/server/pages-manifest.json
 .next/server/webpack-runtime.js
+.next/cache/webpack/server-development/1.pack
