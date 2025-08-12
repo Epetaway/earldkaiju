@@ -1776,6 +1776,14 @@
       "oAP" : "\/attached_assets\/Pasted-Run-npm-ci-npm-error-code-EUSAGE-npm-error-npm-error-npm-ci-can-only-install-packages-when-your-pa-1755010696815_1755010696816.txt",
       "oF" : 0
     },
+    "\/attached_assets\/Pasted-Skip-to-content-Navigation-Menu-Epetaway-earldkaiju-Type-to-search-Code-Issues-Pull-requests-Acti-1755011205965_1755011205967.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/attached_assets\/Pasted-Skip-to-content-Navigation-Menu-Epetaway-earldkaiju-Type-to-search-Code-Issues-Pull-requests-Acti-1755011205965_1755011205967.txt",
+      "oF" : 0
+    },
     "\/CNAME" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2105,6 +2113,14 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
+    },
+    "\/yarn.lock" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/yarn.lock",
+      "oF" : 0
     }
   },
   "hooks" : [
