@@ -43,20 +43,22 @@ export default function Home({ articles = [] }) {
   return (
     <>
       <NextSeo
-        title="Earl H."
-        description={siteMeta.description}
+        title="Earl Hickson Jr. - Senior Front-End Engineer"
+        description="Versatile Front-End Engineer with 6+ years creating responsive, accessible, high-performing web applications. Proven track record of measurable results. Based in Parsippany, NJ."
         canonical="https://ehicksonjr.com/"
         openGraph={{
           url: 'https://ehicksonjr.com',
+          title: 'Earl Hickson Jr. - Senior Front-End Engineer',
+          description: 'Professional Front-End Engineer specializing in React, JavaScript, and modern web technologies with proven results.',
           images: [
             {
-              url: `https://og.ehicksonjr.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
+              url: `https://ehicksonjr.com/_next/static/media/me.edd8b1e7.jpeg`,
               width: 1200,
               height: 600,
-              alt: 'Og Image Alt',
+              alt: 'Earl Hickson Jr. - Senior Front-End Engineer',
             },
           ],
-          siteName: 'ehicksonjr',
+          siteName: 'Earl Hickson Jr.',
         }}
       />
 
@@ -68,14 +70,17 @@ export default function Home({ articles = [] }) {
 
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Crafting Engaging Digital Experiences
+              Senior Front-End Engineer
             </h1>
             <div className="prose mt-6 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400 space-y-5">
               <p>
-                Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey. I specialize in crafting user-friendly, responsive web experiences through clean code and innovative designs.
+                Versatile Front-End Engineer with 6+ years creating responsive, accessible, high-performing web applications. 
+                Proven track record: +37% lead conversions, +25% organic traffic, +75% live stream engagement.
+                Based in Parsippany, New Jersey.
               </p>
               <p>
-                Explore my work, learn about my journey, and discover how I bring ideas to life with a blend of creativity and technical skill.
+                Specializing in React, JavaScript ES6+, and modern web technologies with a focus on user experience 
+                and accessibility compliance (WCAG 2.1). Currently expanding into full-stack development.
               </p>
             </div>
           </div>
