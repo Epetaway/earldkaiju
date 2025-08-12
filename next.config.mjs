@@ -3,12 +3,12 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'out',
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/earldkaiju/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/earldkaiju' : '',
+  transpilePackages: ['lucide-react']
 }
 
 export default nextConfig

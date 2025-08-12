@@ -69,9 +69,10 @@ export default function EarldKaiju() {
   const { data: socialMediaData, isLoading: socialMediaLoading } = useQuery({
     queryKey: ['/api/social-media'],
     refetchInterval: 5 * 60 * 1000, // Refetch every 5 minutes
+    enabled: true, // Enable for real API integration
   });
 
-  const socialMediaPosts = (socialMediaData as { posts: SocialMediaPost[] })?.posts || [];
+  const socialMediaPosts: SocialMediaPost[] = (socialMediaData as any)?.posts || [];
   const instagramPosts = socialMediaPosts.filter((post: SocialMediaPost) => post.platform === 'instagram');
   const youtubePosts = socialMediaPosts.filter((post: SocialMediaPost) => post.platform === 'youtube');
 
@@ -93,15 +94,23 @@ export default function EarldKaiju() {
     },
   });
 
-  // Automatically fetch content when the component loads and when data is empty
+  // Fetch content on component mount
   useEffect(() => {
-    // Only fetch if we don't have data yet
-    if (!socialMediaLoading && socialMediaPosts.length === 0) {
-      console.log('No posts found, triggering fetch...');
-      fetchInstagramMutation.mutate();
-      fetchYoutubeMutation.mutate();
-    }
-  }, [socialMediaData, socialMediaLoading]);
+    // Fetch YouTube videos
+    fetchYoutubeMutation.mutate();
+    
+    // Fetch Instagram posts 
+    fetchInstagramMutation.mutate();
+  }, []);
+
+  // Disabled for static export
+  // useEffect(() => {
+  //   if (!socialMediaLoading && socialMediaPosts.length === 0) {
+  //     console.log('No posts found, triggering fetch...');
+  //     fetchInstagramMutation.mutate();
+  //     fetchYoutubeMutation.mutate();
+  //   }
+  // }, [socialMediaData, socialMediaLoading]);
 
 
 
@@ -122,14 +131,14 @@ export default function EarldKaiju() {
               IBJJF Black Belt • Competitor • Coach
             </div>
             
-            {/* Kaiju Logo SVG */}
+            {/* Kaiju Logo */}
             <div className="flex justify-center mb-8">
-              <div className="w-64 h-64 lg:w-80 lg:h-80 bg-[#39FF14]/20 rounded-full flex items-center justify-center border-4 border-[#39FF14]/30 shadow-2xl shadow-[#39FF14]/50" data-testid="kaiju-logo">
-                <div className="text-center">
-                  <i className="fas fa-dragon text-[#39FF14] text-6xl lg:text-8xl mb-4 drop-shadow-2xl"></i>
-                  <div className="text-[#39FF14] font-bold text-xl lg:text-2xl tracking-wider">EARL THE KAIJU</div>
-                  <div className="text-white text-sm lg:text-base opacity-80">BJJ BLACK BELT</div>
-                </div>
+              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#39FF14]/30 shadow-2xl shadow-[#39FF14]/50" data-testid="kaiju-logo">
+                <img 
+                  src="/images/kaiju-logo.png" 
+                  alt="Earl The Kaiju - BJJ Black Belt Logo" 
+                  className="w-full h-full object-contain bg-black"
+                />
               </div>
             </div>
             
@@ -318,11 +327,20 @@ export default function EarldKaiju() {
                 <div className="order-1 md:order-1">
                   <div className="bg-white/5 rounded-xl p-4 border border-[#39FF14]/20 h-full flex items-center justify-center min-h-[400px]">
                     <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <i className="fas fa-user-circle text-[#39FF14] text-8xl mb-4 drop-shadow-lg"></i>
-                        <div className="text-white font-bold text-lg">Earl Hickson Jr.</div>
-                        <div className="text-[#39FF14] text-sm">BJJ Black Belt</div>
-                        <div className="text-gray-400 text-xs mt-2">Photo coming soon</div>
+                      <div className="w-full max-w-sm aspect-square rounded-xl overflow-hidden border-2 border-[#39FF14]/30">
+                        <img 
+                          src="/images/earl-fighter.png" 
+                          alt="Earl 'The Kaiju' Hickson - BJJ Black Belt with his son" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      {/* Small Kaiju logo badge */}
+                      <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-full overflow-hidden border-4 border-[#39FF14] shadow-xl bg-black">
+                        <img 
+                          src="/images/kaiju-logo.png" 
+                          alt="Kaiju Logo Badge" 
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                     </div>
                   </div>
@@ -504,8 +522,8 @@ export default function EarldKaiju() {
                           >
                             <div className="relative aspect-video bg-black/60 overflow-hidden">
                               <img 
-                                src={post.thumbnailUrl} 
-                                alt={post.caption || 'YouTube video thumbnail'}
+                                src={post.thumbnailUrl ?? ''} 
+                                alt={post.caption ?? 'YouTube video thumbnail'}
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 loading="lazy"
                               />
@@ -795,7 +813,7 @@ export default function EarldKaiju() {
                         <FormControl>
                           <Textarea 
                             {...field}
-                            value={field.value || ''}
+                            value={field.value ?? ''}
                             className="bg-white/20 border-white/30 text-white placeholder-gray-300"
                             placeholder="Tell me about your goals, any previous experience, injuries, or questions..."
                             rows={4}
@@ -816,7 +834,7 @@ export default function EarldKaiju() {
                         <FormControl>
                           <Input 
                             {...field}
-                            value={field.value || ''}
+                            value={field.value ?? ''}
                             className="bg-white/20 border-white/30 text-white placeholder-gray-300"
                             placeholder="e.g., Weekday evenings, Saturday mornings"
                             data-testid="input-availability"

@@ -40,7 +40,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" data-testid="button-resume">
-                  <a href="/api/resume" target="_blank" rel="noopener noreferrer">
+                  <a href="/Earl_Hickson_Resume_2025.pdf" target="_blank" rel="noopener noreferrer">
                     <i className="fas fa-download mr-2"></i>
                     Download Resume (PDF)
                   </a>
@@ -61,16 +61,13 @@ export default function Home() {
 
             {/* Profile Image */}
             <div className="relative animate-float">
-              <div className="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-primary-100 via-blue-50 to-purple-50 rounded-3xl shadow-2xl flex items-center justify-center border-4 border-white/50">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-primary-500 rounded-full flex items-center justify-center text-white text-4xl mb-4 mx-auto shadow-lg">
-                    <i className="fas fa-user-tie"></i>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Earl Hickson Jr.</h3>
-                  <p className="text-gray-600 font-medium">Senior Front-End Engineer</p>
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500 rounded-full flex items-center justify-center text-white text-2xl animate-bounce shadow-lg">
+              <img 
+                src="/images/earl-professional.png" 
+                alt="Earl Hickson Jr. - Professional headshot of a Front-End Engineer" 
+                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
+                data-testid="hero-image"
+              />
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500 rounded-full flex items-center justify-center text-white text-2xl animate-bounce">
                 <i className="fas fa-laptop-code"></i>
               </div>
             </div>
@@ -127,30 +124,30 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 gradient-text" data-testid="section-title-services">Services & Expertise</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4" data-testid="section-title-services">Services & Expertise</h2>
             <p className="text-xl text-gray-600">What I bring to your engineering team</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 border border-blue-100/50">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <i className="fas fa-cogs text-primary-500 text-2xl mb-4"></i>
               <h3 className="font-bold mb-2" data-testid="service-ui-engineering">UI Engineering</h3>
               <p className="text-sm text-gray-600">Component libraries, design tokens, responsive systems</p>
             </div>
-            <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 border border-blue-100/50">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <i className="fas fa-cubes text-primary-500 text-2xl mb-4"></i>
               <h3 className="font-bold mb-2" data-testid="service-design-systems">Design Systems</h3>
               <p className="text-sm text-gray-600">Scalable component architectures, documentation, governance</p>
             </div>
-            <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 border border-blue-100/50">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <i className="fas fa-universal-access text-primary-500 text-2xl mb-4"></i>
               <h3 className="font-bold mb-2" data-testid="service-accessibility">Accessibility</h3>
               <p className="text-sm text-gray-600">WCAG compliance, screen reader support, inclusive design</p>
             </div>
-            <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 border border-blue-100/50">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
               <i className="fas fa-rocket text-primary-500 text-2xl mb-4"></i>
               <h3 className="font-bold mb-2" data-testid="service-performance">Performance</h3>
               <p className="text-sm text-gray-600">Core Web Vitals, bundle optimization, caching strategies</p>
@@ -184,9 +181,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-50 to-purple-50">
+      <section className="py-20 bg-primary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8 gradient-text" data-testid="cta-title">Ready to Work Together?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-8" data-testid="cta-title">Ready to Work Together?</h2>
           <p className="text-xl text-gray-600 mb-12">
             Let's discuss how I can contribute to your development team and help build exceptional user experiences.
           </p>
@@ -208,7 +205,7 @@ export default function Home() {
               </Button>
               
               <Button asChild variant="outline" size="lg" data-testid="button-github">
-                <a href="https://github.com/Epetaway" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/ehicksonjr" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github mr-3"></i>
                   GitHub
                 </a>
