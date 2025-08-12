@@ -1794,6 +1794,14 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/package-lock.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/package-lock-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/package.json" : {
       "ft" : 524288,
       "oA" : 1,
