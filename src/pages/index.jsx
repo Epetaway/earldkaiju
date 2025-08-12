@@ -43,22 +43,20 @@ export default function Home({ articles = [] }) {
   return (
     <>
       <NextSeo
-        title="Earl Hickson Jr. - Senior Front-End Engineer"
-        description="Versatile Front-End Engineer with 6+ years creating responsive, accessible, high-performing web applications. Proven track record of measurable results. Based in Parsippany, NJ."
+        title="Earl H."
+        description={siteMeta.description}
         canonical="https://ehicksonjr.com/"
         openGraph={{
           url: 'https://ehicksonjr.com',
-          title: 'Earl Hickson Jr. - Senior Front-End Engineer',
-          description: 'Professional Front-End Engineer specializing in React, JavaScript, and modern web technologies with proven results.',
           images: [
             {
-              url: `https://ehicksonjr.com/_next/static/media/me.edd8b1e7.jpeg`,
+              url: `https://og.ehicksonjr.com/api/og?title=${siteMeta.title}&desc=${siteMeta.description}`,
               width: 1200,
               height: 600,
-              alt: 'Earl Hickson Jr. - Senior Front-End Engineer',
+              alt: 'Og Image Alt',
             },
           ],
-          siteName: 'Earl Hickson Jr.',
+          siteName: 'ehicksonjr',
         }}
       />
 
@@ -70,17 +68,14 @@ export default function Home({ articles = [] }) {
 
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Senior Front-End Engineer
+              Crafting Engaging Digital Experiences
             </h1>
             <div className="prose mt-6 text-lg text-zinc-600 dark:prose-invert dark:text-zinc-400 space-y-5">
               <p>
-                Versatile Front-End Engineer with 6+ years creating responsive, accessible, high-performing web applications. 
-                Proven track record of delivering measurable results and performance improvements.
-                Based in Parsippany, New Jersey.
+                Welcome to the portfolio of Earl Hickson Jr., a Front-End Developer based in Parsippany, New Jersey. I specialize in crafting user-friendly, responsive web experiences through clean code and innovative designs.
               </p>
               <p>
-                Specializing in React, JavaScript ES6+, and modern web technologies with a focus on user experience 
-                and accessibility compliance (WCAG 2.1). Currently expanding into full-stack development.
+                Explore my work, learn about my journey, and discover how I bring ideas to life with a blend of creativity and technical skill.
               </p>
             </div>
           </div>

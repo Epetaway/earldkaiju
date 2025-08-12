@@ -4293,19 +4293,19 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/public\/Earl_Hickson_Resume_2025.pdf" : {
+    "\/public\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/public\/Earl_Hickson_Resume_2025.pdf",
+      "oAP" : "\/public\/favicon.ico",
       "oF" : 0
     },
-    "\/public\/images\/asembia.png" : {
+    "\/public\/fixed\/Embrace.png" : {
       "ft" : 32768,
-      "iS" : 19399,
+      "iS" : 1284553,
       "oA" : 0,
-      "oAP" : "\/public\/images\/asembia.png",
+      "oAP" : "\/public\/fixed\/Embrace.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4314,11 +4314,11 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/broadcastmed.png" : {
+    "\/public\/fixed\/favicons\/android-chrome-96x96.png" : {
       "ft" : 32768,
-      "iS" : 9622,
+      "iS" : 3327,
       "oA" : 0,
-      "oAP" : "\/public\/images\/broadcastmed.png",
+      "oAP" : "\/public\/fixed\/favicons\/android-chrome-96x96.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4327,11 +4327,11 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/earl-fighter.png" : {
+    "\/public\/fixed\/favicons\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 1807531,
+      "iS" : 3738,
       "oA" : 0,
-      "oAP" : "\/public\/images\/earl-fighter.png",
+      "oAP" : "\/public\/fixed\/favicons\/apple-touch-icon.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4340,11 +4340,19 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/earl-professional.png" : {
-      "ft" : 32768,
-      "iS" : 643577,
+    "\/public\/fixed\/favicons\/browserconfig.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/public\/images\/earl-professional.png",
+      "oAP" : "\/public\/fixed\/favicons\/browserconfig.xml",
+      "oF" : 0
+    },
+    "\/public\/fixed\/favicons\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 1166,
+      "oA" : 0,
+      "oAP" : "\/public\/fixed\/favicons\/favicon-16x16.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4353,11 +4361,11 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/kaiju-logo.png" : {
+    "\/public\/fixed\/favicons\/favicon-32x32.png" : {
       "ft" : 32768,
-      "iS" : 1793424,
+      "iS" : 1461,
       "oA" : 0,
-      "oAP" : "\/public\/images\/kaiju-logo.png",
+      "oAP" : "\/public\/fixed\/favicons\/favicon-32x32.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4366,11 +4374,19 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/LetsConnect.png" : {
-      "ft" : 32768,
-      "iS" : 1635106,
+    "\/public\/fixed\/favicons\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/public\/images\/LetsConnect.png",
+      "oAP" : "\/public\/fixed\/favicons\/favicon.ico",
+      "oF" : 0
+    },
+    "\/public\/fixed\/favicons\/mstile-150x150.png" : {
+      "ft" : 32768,
+      "iS" : 4362,
+      "oA" : 0,
+      "oAP" : "\/public\/fixed\/favicons\/mstile-150x150.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4379,34 +4395,29 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/meAnimated.png" : {
-      "ft" : 32768,
-      "iS" : 2965438,
-      "oA" : 0,
-      "oAP" : "\/public\/images\/meAnimated.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
-    },
-    "\/public\/images\/Merck_Logo.svg" : {
+    "\/public\/fixed\/favicons\/safari-pinned-tab.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/public\/images\/Merck_Logo.svg",
+      "oAP" : "\/public\/fixed\/favicons\/safari-pinned-tab.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/public\/images\/Merkle.png" : {
-      "ft" : 32768,
-      "iS" : 34721,
+    "\/public\/fixed\/favicons\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/public\/images\/Merkle.png",
+      "oAP" : "\/public\/fixed\/favicons\/site.webmanifest",
+      "oF" : 0
+    },
+    "\/public\/fixed\/Struggles.png" : {
+      "ft" : 32768,
+      "iS" : 2178136,
+      "oA" : 0,
+      "oAP" : "\/public\/fixed\/Struggles.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -4415,70 +4426,31 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/public\/images\/project-shape1.png" : {
-      "ft" : 32768,
-      "iS" : 869101,
-      "oA" : 0,
-      "oAP" : "\/public\/images\/project-shape1.png",
+    "\/public\/fixed\/UJ_logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/public\/fixed\/UJ_logo.svg",
       "oF" : 0,
-      "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
+      "plM" : 52780316221407,
+      "prP" : 0
     },
-    "\/public\/images\/project-shape2.png" : {
-      "ft" : 32768,
-      "iS" : 1227949,
-      "oA" : 0,
-      "oAP" : "\/public\/images\/project-shape2.png",
+    "\/public\/rss\/feed.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/public\/rss\/feed-min.json",
       "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
+      "oO" : 1,
+      "oS" : 1
     },
-    "\/public\/images\/project-shape3.png" : {
-      "ft" : 32768,
-      "iS" : 812510,
+    "\/public\/rss\/feed.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/public\/images\/project-shape3.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
-    },
-    "\/public\/images\/prosek.png" : {
-      "ft" : 32768,
-      "iS" : 8117,
-      "oA" : 0,
-      "oAP" : "\/public\/images\/prosek.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
-    },
-    "\/public\/images\/verizon.png" : {
-      "ft" : 32768,
-      "iS" : 3320,
-      "oA" : 0,
-      "oAP" : "\/public\/images\/verizon.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
+      "oAP" : "\/public\/rss\/feed.xml",
+      "oF" : 0
     },
     "\/pyproject.toml" : {
       "cB" : 0,
@@ -4732,17 +4704,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/src\/components\/ContactForm.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/src\/components\/ContactForm-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/src\/components\/Container.jsx" : {
       "bF" : 0,
       "ft" : 64,
@@ -4882,17 +4843,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/src\/components\/JiuJitsuCTA-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/components\/JumbotronCarousel.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/src\/components\/JumbotronCarousel-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -5604,17 +5554,17 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/src\/images\/photos\/me.png" : {
-      "ft" : 32768,
+    "\/src\/images\/photos\/me.jpeg" : {
+      "ft" : 16384,
       "iS" : 643577,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/src\/images\/photos\/me.png",
+      "oAP" : "\/src\/images\/photos\/me.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
-      "q" : 90,
+      "q" : 100,
       "rq" : 75
     },
     "\/src\/images\/photos\/MeBjj_2.jpg" : {
@@ -5800,60 +5750,21 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/src\/pages\/articles\/post-1\/index.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
+    "\/src\/pages\/articles\/post-1\/index.mdx" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/src\/pages\/articles\/post-1\/index-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
+      "oAP" : "\/src\/pages\/articles\/post-1\/index.mdx",
+      "oF" : 0
     },
-    "\/src\/pages\/articles\/post-2\/index.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
+    "\/src\/pages\/articles\/post-2\/index.mdx" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/src\/pages\/articles\/post-2\/index-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/pages\/case-studies.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/src\/pages\/case-studies-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/pages\/contact.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/src\/pages\/contact-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/pages\/earldkaiju.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/src\/pages\/earldkaiju-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
+      "oAP" : "\/src\/pages\/articles\/post-2\/index.mdx",
+      "oF" : 0
     },
     "\/src\/pages\/index.jsx" : {
       "bF" : 0,
@@ -5862,17 +5773,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/src\/pages\/index-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/pages\/jiujitsu.jsx" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/src\/pages\/jiujitsu-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -6011,7 +5911,7 @@
     "creationDate" : 706657172.03256595,
     "displayValue" : "Tailwind-Site",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "\/out\/fixed\/favicons\/apple-touch-icon.png",
+    "iconImageName" : "\/public\/fixed\/favicons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {

@@ -1,14 +1,25 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  images: {
-    unoptimized: true
-  },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/earldkaiju/' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/earldkaiju' : '',
-  transpilePackages: ['lucide-react']
-}
+import remarkGfm from 'remark-gfm';
+import rehypePrismPlus from 'rehype-prism-plus';
+import remarkCodeTitles from './src/lib/remark-code-title.mjs';
+import rehypePresetMinify from 'rehype-preset-minify';
+import nextMDX from '@next/mdx';
 
-export default nextConfig
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm, remarkCodeTitles],
+    rehypePlugins: [rehypePrismPlus, rehypePresetMinify],
+  },
+});
+
+const nextConfig = withMDX({
+  output: 'export', // you set it here yourself
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  reactStrictMode: true,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+});
+
+export default nextConfig;

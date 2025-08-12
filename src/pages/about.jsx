@@ -34,7 +34,7 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About - Earl Hickson Jr. - Senior Front-End Engineer"
+        title="About - Earl The Kaiju"
         description={siteMeta.description}
         canonical="https://ehicksonjr.com/about"
         openGraph={{
@@ -61,7 +61,7 @@ export default function About() {
             </h1>
             <div className="prose prose-lg mt-6 dark:prose-invert text-zinc-600 dark:text-zinc-400 space-y-5">
               <p>
-                I&apos;m Earl Hickson Jr., a Senior Front-End Engineer and Graphic Designer based in Parsippany, New Jersey. With 6+ years of experience in HTML, CSS, JavaScript, React, and proficiency in tools like Adobe Creative Suite, I specialize in creating accessible, high-performing web applications with proven results.
+                I&apos;m Earl Hickson Jr., a Front-End Developer and Graphic Designer based in Parsippany, New Jersey. With a strong foundation in HTML, CSS, JavaScript, and proficiency in tools like Adobe Creative Suite, I specialize in creating user-friendly and visually captivating websites.
               </p>
               <p>
                 My journey into martial arts began in 2015 when I discovered Brazilian Jiu-Jitsu. This discipline not only enhanced my physical abilities but also instilled in me a profound sense of confidence, discipline, and community. The concept of the &apos;kaiju&apos;—a powerful force capable of both destruction and great good—resonates deeply with me. It symbolizes the inner strength and potential we all possess, which I&apos;ve learned to harness through Jiu-Jitsu.
@@ -121,7 +121,7 @@ export default function About() {
             When I&apos;m not coding or designing, you can find me on the Jiu-Jitsu mat, channeling my inner kaiju, or spending quality time with my family. I&apos;m passionate about creating digital experiences that not only look great but also provide meaningful user interactions.
           </p>
           <p>
-            If you&apos;re seeking a web engineer who combines technical proficiency with a unique perspective and a commitment to excellence, let&apos;s connect and create something extraordinary together.
+            If you&apos;re seeking a web developer who combines technical proficiency with a unique perspective and a commitment to excellence, let&apos;s connect and create something extraordinary together.
           </p>
         </div>
          </div>
