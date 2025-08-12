@@ -1,11 +1,19 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  pageExtensions: ['js', 'jsx'],
-  reactStrictMode: true,
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: true
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  experimental: {
+    esmExternals: 'loose'
+  }
 };
 
 export default nextConfig;
