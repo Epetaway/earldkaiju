@@ -31,11 +31,11 @@ export default function Contact() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mb-6">
-              Let's Build Something Great Together
+              Let&rsquo;s Build Something Great Together
             </h1>
             <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-3xl mx-auto">
               Ready to optimize your front-end performance, improve accessibility, or tackle complex engineering challenges? 
-              I'd love to discuss how we can achieve measurable results for your project.
+              I&rsquo;d love to discuss how we can achieve measurable results for your project.
             </p>
           </div>
 
@@ -135,7 +135,7 @@ export default function Contact() {
               <div>
                 <h4 className="font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Budget & Timeline</h4>
                 <p className="text-sm">
-                  Sharing your budget range and deadline helps ensure we're aligned on project expectations 
+                  Sharing your budget range and deadline helps ensure we&rsquo;re aligned on project expectations 
                   and can deliver the best possible results within your constraints.
                 </p>
               </div>
