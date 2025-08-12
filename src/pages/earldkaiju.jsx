@@ -22,16 +22,22 @@ export default function EarldKaiju() {
     // For now, we'll simulate a successful submission
     
     try {
-      // Replace with your form service endpoint
-      const response = await fetch('https://formspree.io/f/your-bjj-form-id', {
+      // Formspree endpoint for BJJ bookings
+      const response = await fetch('https://formspree.io/f/xdknqgka', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          experience: formData.experience,
+          goals: formData.goals,
+          availability: formData.availability,
           subject: 'BJJ Private Lesson Booking Request',
           _replyto: formData.email,
+          _subject: 'New BJJ Private Lesson Request',
         }),
       });
 
@@ -71,7 +77,7 @@ export default function EarldKaiju() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mb-6">
-              Private BJJ Lessons with Earl "Kaiju" Hickson Jr.
+              Private BJJ Lessons with Earl &ldquo;Kaiju&rdquo; Hickson Jr.
             </h1>
             <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-8">
               BJJ Black Belt • NAGA Competitor • Personalized Training
@@ -116,7 +122,7 @@ export default function EarldKaiju() {
                 </p>
                 <p>
                   My approach focuses on fundamental techniques, strategic thinking, and building confidence on the mats. 
-                  Whether you're a complete beginner or looking to refine advanced techniques, each session is tailored 
+                  Whether you&rsquo;re a complete beginner or looking to refine advanced techniques, each session is tailored 
                   to your specific goals and learning style.
                 </p>
                 
@@ -149,7 +155,7 @@ export default function EarldKaiju() {
                     Request Submitted Successfully!
                   </h3>
                   <p className="text-green-700 dark:text-green-300">
-                    Thank you for your interest in private BJJ lessons. I'll review your request and get back to you 
+                    Thank you for your interest in private BJJ lessons. I&rsquo;ll review your request and get back to you 
                     within 24 hours to discuss scheduling and next steps.
                   </p>
                   <Button 
